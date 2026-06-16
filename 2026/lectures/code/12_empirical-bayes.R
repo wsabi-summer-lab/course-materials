@@ -8,10 +8,12 @@
 
 # install.packages(c("dplyr", "ggplot2", "readr", "tidyr"))
 
-library(dplyr)
-library(ggplot2)
-library(readr)
-library(tidyr)
+suppressPackageStartupMessages({
+    library(dplyr)
+    library(ggplot2)
+    library(readr)
+    library(tidyr)
+})
 
 ################
 ### SETTINGS ###
@@ -34,15 +36,39 @@ theme_week = theme_minimal(base_size = 12) +
 batting = read_csv(data_path, show_col_types = FALSE) |>
     filter(AB_2020 >= 20, AB_2021 >= 100)
 
-mu_hat = with(batting, sum(H_2020) / sum(AB_2020))
-C_hat = mu_hat * (1 - mu_hat)
-tau2_hat = max(var(batting$BA_2020) - mean(C_hat / batting$AB_2020), 0)
+league_mean = with(batting, sum(H_2020) / sum(AB_2020))
+C_hat = league_mean * (1 - league_mean)
+tau2_hat = max(var(batting$BA_2020) - mean(C_hat / batting$AB_2020), 1e-8)
+starting_strength = C_hat / tau2_hat - 1
+
+neg_log_beta_binomial = function(log_par) {
+    alpha = exp(log_par[1])
+    beta = exp(log_par[2])
+
+    -sum(
+        lchoose(batting$AB_2020, batting$H_2020) +
+            lbeta(batting$H_2020 + alpha, batting$AB_2020 - batting$H_2020 + beta) -
+            lbeta(alpha, beta)
+    )
+}
+
+beta_fit = optim(
+    par = log(c(league_mean * starting_strength, (1 - league_mean) * starting_strength)),
+    fn = neg_log_beta_binomial,
+    method = "BFGS"
+)
+
+alpha_hat = exp(beta_fit$par[1])
+beta_hat = exp(beta_fit$par[2])
+prior_strength = alpha_hat + beta_hat
+prior_center = alpha_hat / prior_strength
 
 batting = batting |>
     mutate(
         sigma2 = C_hat / AB_2020,
         lambda = tau2_hat / (tau2_hat + sigma2),
-        EB_2020 = mu_hat + lambda * (BA_2020 - mu_hat),
+        fake_data_weight = AB_2020 / (AB_2020 + prior_strength),
+        EB_2020 = (H_2020 + alpha_hat) / (AB_2020 + alpha_hat + beta_hat),
         shrinkage = BA_2020 - EB_2020
     )
 
@@ -56,6 +82,24 @@ arrow_data = batting |>
     arrange(BA_2020) |>
     mutate(rank = row_number())
 
+label_lookup = c(
+    "vanmejo01" = "Josh VanMeter",
+    "mercaos01" = "Oscar Mercado",
+    "hayeske01" = "Ke'Bryan Hayes",
+    "leonsa01" = "Sandy Leon",
+    "santada01" = "Danny Santana",
+    "iglesjo01" = "Jose Iglesias",
+    "plaweke01" = "Kevin Plawecki",
+    "lemahdj01" = "DJ LeMahieu"
+)
+
+label_data = arrow_data |>
+    filter(playerID %in% names(label_lookup)) |>
+    mutate(
+        label = unname(label_lookup[playerID]),
+        label_x = pmax(BA_2020, EB_2020) + 0.006
+    )
+
 arrow_plot = ggplot(arrow_data) +
     geom_segment(
         aes(x = BA_2020, xend = EB_2020, y = rank, yend = rank),
@@ -65,13 +109,23 @@ arrow_plot = ggplot(arrow_data) +
     ) +
     geom_point(aes(BA_2020, rank), color = "#B22222", size = 2.1) +
     geom_point(aes(EB_2020, rank), color = "#1F78B4", size = 2.1) +
-    geom_vline(xintercept = mu_hat, linetype = "dashed", color = "gray40") +
+    geom_text(
+        data = label_data,
+        aes(label_x, rank, label = label),
+        hjust = 0,
+        size = 3.1,
+        color = "gray20",
+        check_overlap = TRUE
+    ) +
+    geom_vline(xintercept = prior_center, linetype = "dashed", color = "gray40") +
+    coord_cartesian(xlim = c(0.11, 0.42), clip = "off") +
     labs(
         title = "Raw and Empirical-Bayes Batting Averages",
         x = "Batting-average estimate",
         y = "Players ordered by raw batting average"
     ) +
-    theme_week
+    theme_week +
+    theme(plot.margin = margin(5.5, 70, 5.5, 5.5))
 
 ggsave(
     file.path(figure_dir, "12_shrinkage-arrows.png"),
@@ -85,7 +139,7 @@ ggsave(
 ### SHRINKAGE VS SAMPLE N ###
 #############################
 
-lambda_plot = ggplot(batting, aes(AB_2020, lambda)) +
+lambda_plot = ggplot(batting, aes(AB_2020, fake_data_weight)) +
     geom_point(alpha = 0.65, color = "#4C78A8") +
     geom_smooth(
         method = "loess",
@@ -96,9 +150,9 @@ lambda_plot = ggplot(batting, aes(AB_2020, lambda)) +
     ) +
     scale_y_continuous(limits = c(0, 1)) +
     labs(
-        title = "Shrinkage Weight by At-Bats",
+        title = "Data Weight by At-Bats",
         x = "2020 at-bats",
-        y = "Data weight lambda"
+        y = "Data weight N / (N + learned fake at-bats)"
     ) +
     theme_week
 
