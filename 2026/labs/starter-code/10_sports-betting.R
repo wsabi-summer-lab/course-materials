@@ -177,3 +177,5 @@ add_model_noise <- function(p_true, sd_eps = 0.03) {
 # 1. Simulate outcomes using p_true.
 # 2. Size bets using noisy p_hat.
 # 3. Compare full Kelly, half Kelly, and quarter Kelly under model error.
+
+
