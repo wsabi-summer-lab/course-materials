@@ -7,6 +7,13 @@
 #############
 
 # install.packages(c("bayesplot", "ggplot2", "rstan", "tidyverse"))
+# Windows users: Stan models are compiled locally, so rstan needs a working
+# Rtools C++ toolchain that matches your R version. If R says additional tools
+# are required, run these lines to diagnose the setup:
+# install.packages("pkgbuild")
+# pkgbuild::has_build_tools(debug = TRUE)
+# Sys.which(c("make", "gcc", "g++"))
+# R.version.string
 library(bayesplot)
 library(ggplot2)
 library(rstan)
