@@ -131,8 +131,7 @@ ps_formula <- timeout_now ~
   factor(period_number) +
   end_game_seconds_remaining +
   home_focal +
-  pregame_spread_focal +
-  spread_missing
+  pregame_spread_focal
 
 ps_model <- glm(
   formula = ps_formula,
@@ -184,8 +183,7 @@ outcome_formula <- margin_change_next_180 ~
   factor(period_number) +
   end_game_seconds_remaining +
   home_focal +
-  pregame_spread_focal +
-  spread_missing
+  pregame_spread_focal
 
 reg_model <- lm(
   formula = outcome_formula,
