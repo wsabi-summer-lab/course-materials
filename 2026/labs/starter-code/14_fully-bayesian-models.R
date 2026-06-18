@@ -7,12 +7,7 @@
 #############
 
 # install.packages(c("bayesplot", "ggplot2", "rstan", "tidyverse"))
-# Windows users: if rstan says additional tools are required, use cmdstanr
-# instead. It has a clearer Windows toolchain setup:
-# install.packages("cmdstanr", repos = c("https://stan-dev.r-universe.dev", getOption("repos")))
-# library(cmdstanr)
-# cmdstanr::check_cmdstan_toolchain(fix = TRUE)
-# cmdstanr::install_cmdstan()
+# Windows users: Stan requires the correct RTools version for your R version.
 library(bayesplot)
 library(ggplot2)
 library(rstan)
