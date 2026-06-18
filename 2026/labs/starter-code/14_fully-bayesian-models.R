@@ -7,6 +7,7 @@
 #############
 
 # install.packages(c("bayesplot", "ggplot2", "rstan", "tidyverse"))
+# Windows users: Stan requires the correct RTools version for your R version.
 library(bayesplot)
 library(ggplot2)
 library(rstan)
