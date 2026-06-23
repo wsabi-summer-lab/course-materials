@@ -463,6 +463,16 @@ bin_data = train_valid |>
     ) |>
     filter(n >= 150)
 
+tree_curve_display = curve_grid |>
+    mutate(
+        tree_ep_display = tree_ep + case_when(
+            down == "1" ~ 0.06,
+            down == "2" ~ -0.06,
+            down == "3" ~ 0.03,
+            TRUE ~ -0.03
+        )
+    )
+
 tree_curve_plot = ggplot() +
     geom_point(
         data = bin_data,
@@ -471,8 +481,8 @@ tree_curve_plot = ggplot() +
         size = 1.7
     ) +
     geom_step(
-        data = curve_grid,
-        aes(field_pos, tree_ep, color = down),
+        data = tree_curve_display,
+        aes(field_pos, tree_ep_display, color = down),
         linewidth = 1
     ) +
     geom_hline(yintercept = 0, color = "gray55", linetype = "dashed") +
