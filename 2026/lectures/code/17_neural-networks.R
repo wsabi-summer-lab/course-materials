@@ -35,6 +35,58 @@ theme_week = theme_minimal(base_size = 12) +
         plot.title.position = "plot"
     )
 
+activation_grid = tibble(z = seq(-5, 5, length.out = 601)) |>
+    mutate(
+        `ReLU\nphi(z) = max(0, z)` = pmax(0, z),
+        `Leaky ReLU\nphi(z) = max(0.1z, z)` = if_else(z >= 0, z, 0.1 * z),
+        `tanh\nphi(z) = tanh(z)` = tanh(z),
+        `Sigmoid output\ng(z) = 1 / (1 + exp(-z))` = 1 / (1 + exp(-z))
+    ) |>
+    pivot_longer(
+        cols = -z,
+        names_to = "activation",
+        values_to = "value"
+    ) |>
+    mutate(
+        activation = factor(
+            activation,
+            levels = c(
+                "ReLU\nphi(z) = max(0, z)",
+                "Leaky ReLU\nphi(z) = max(0.1z, z)",
+                "tanh\nphi(z) = tanh(z)",
+                "Sigmoid output\ng(z) = 1 / (1 + exp(-z))"
+            )
+        )
+    )
+
+activation_plot = ggplot(activation_grid, aes(z, value, color = activation)) +
+    geom_hline(yintercept = 0, color = "gray78", linewidth = 0.35) +
+    geom_vline(xintercept = 0, color = "gray78", linewidth = 0.35) +
+    geom_line(linewidth = 1.05, show.legend = FALSE) +
+    facet_wrap(vars(activation), scales = "free_y", ncol = 2) +
+    scale_color_manual(values = c("#277DA1", "#D95D39", "#4D908E", "#6A4C93")) +
+    labs(
+        title = "Common Nonlinear Transformations in Neural Networks",
+        subtitle = "Hidden layers use phi; binary output uses g",
+        x = "Input z",
+        y = "Transformed value"
+    ) +
+    theme_week +
+    theme(
+        legend.position = "none",
+        strip.text = element_text(face = "bold", lineheight = 0.95),
+        panel.grid.minor = element_blank()
+    )
+
+ggsave(
+    file.path(figure_dir, "17_activation-functions.png"),
+    activation_plot,
+    width = 7.6,
+    height = 4.9,
+    dpi = 300,
+    bg = "white"
+)
+
 log_loss = function(y, p) {
     p = pmin(pmax(p, 1e-6), 1 - 1e-6)
     -mean(y * log(p) + (1 - y) * log(1 - p))
