@@ -13,9 +13,9 @@ set.seed(18)
 ### NBA DATA ###
 ################
 
-data_path = "../data/18_unsupervised-learning-nba-clusters.csv"
+data_path = "../data/18_nba-clusters.csv"
 if (!file.exists(data_path)) {
-    data_path = "2026/labs/data/18_unsupervised-learning-nba-clusters.csv"
+    data_path = "2026/labs/data/18_nba-clusters.csv"
 }
 
 nba_data = read_csv(data_path, show_col_types = FALSE)
