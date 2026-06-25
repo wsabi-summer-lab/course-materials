@@ -331,7 +331,7 @@ nearest_players = target_cases |>
     unnest(neighbors)
 
 nearest_players |>
-    left_join(
+    left_join( 
         nba_clustered |>
             select(player_szn, cluster),
         by = "player_szn"
