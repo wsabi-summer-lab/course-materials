@@ -252,7 +252,7 @@ rich_cols = c(
 rich_bandwidth_grid = c(0.6, 0.8, 1.0, 1.25, 1.5, 2.0)
 
 # TODO: Standardize rich features using train, then tune bandwidth on validation.
-# rich_train_validation_scaled = standardize_train_new(train, validation, rich_cols)
+# rich_validation_scaled = standardize_train_new(train, validation, rich_cols)
 #
 # rich_validation_results = tibble(bandwidth = rich_bandwidth_grid) |>
 #     mutate(
@@ -260,25 +260,30 @@ rich_bandwidth_grid = c(0.6, 0.8, 1.0, 1.25, 1.5, 2.0)
 #             bandwidth,
 #             \(h) {
 #                 pred = nw_predict_scaled(
-#                     rich_train_validation_scaled$train,
+#                     rich_validation_scaled$train,
 #                     train$goal,
-#                     rich_train_validation_scaled$new,
+#                     rich_validation_scaled$new,
 #                     bandwidth = h
 #                 )
 #                 log_loss(validation$goal, pred)
 #             }
 #         )
 #     )
+#
+# best_rich_h = rich_validation_results |>
+#     arrange(validation_log_loss) |>
+#     slice(1) |>
+#     pull(bandwidth)
 
 # TODO: Refit using train + validation, evaluate on test, and compare with
 # the location only model.
-
-###############################
-### TASK 5: INTERPRETATION ####
-###############################
-
-# TODO: Explain the nonparametric modeling tradeoff:
-#   * What model form assumption did kernel regression loosen?
-#   * What assumptions did it replace that with?
-#   * Which features make shots similar in your richer model?
-#   * Where are the estimates trustworthy or untrustworthy?
+# rich_test_scaled = standardize_train_new(train_validation, test, rich_cols)
+#
+# rich_test_pred = nw_predict_scaled(
+#     rich_test_scaled$train,
+#     train_validation$goal,
+#     rich_test_scaled$new,
+#     bandwidth = best_rich_h
+# )
+#
+# rich_test_log_loss = log_loss(test$goal, rich_test_pred)
