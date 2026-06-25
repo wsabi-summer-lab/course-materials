@@ -178,7 +178,7 @@ pca_loadings = as_tibble(pca_fit$rotation[, 1:2], rownames = "feature") |>
 
 pca_loadings
 
-# TODO: What does PC1 seem to measure? What does PC2 seem to measure?
+# TODO: PC1 seems to separates a paint finisher and a perimeter player. PC2 seems to seperate a spot up player from an iso player or someone who creates his own plays.
 
 ###########################
 ### K-MEANS CLUSTERING ####
@@ -331,7 +331,7 @@ nearest_players = target_cases |>
     unnest(neighbors)
 
 nearest_players |>
-    left_join( 
+    left_join(
         nba_clustered |>
             select(player_szn, cluster),
         by = "player_szn"
@@ -341,3 +341,15 @@ nearest_players |>
 # TODO: For each team, which 2-3 candidates would you investigate further?
 # Use the nearest-neighbor table, PCA map, k-means clusters, and basketball
 # context to explain your recommendations and limitations.
+
+
+nearest_players |>
+  left_join(
+    nba_clustered |>
+      select(player_szn, cluster),
+    by = "player_szn"
+  ) |>
+  arrange(team, distance) |>
+  print(n = 30)
+
+#Team replacements recommendations for Donovan Mitchell are Darious Garlend, Jalen Green, and Fred VanVleet. These players are consistent with his role on his team, and Green is the closest neighbor in the pool. There are some limitations here though since the play-type frequency says nothing about effiency, quality of shot, agae, salary, defense. 

@@ -87,6 +87,8 @@ nba_data |>
         title = "Distribution Of Offensive Play Types"
     )
 
+
+
 #####################
 ### ROLE FEATURES ###
 #####################
@@ -179,6 +181,11 @@ pca_loadings = as_tibble(pca_fit$rotation[, 1:2], rownames = "feature") |>
 pca_loadings
 
 # TODO: What does PC1 seem to measure? What does PC2 seem to measure?
+# PC1 seems to measure big man with paint presence vs perimeter guys.
+# PC2 seems to measure ball handlers vs off-ball space creators
+
+
+
 
 ###########################
 ### K-MEANS CLUSTERING ####
@@ -331,7 +338,7 @@ nearest_players = target_cases |>
     unnest(neighbors)
 
 nearest_players |>
-    left_join( 
+    left_join(
         nba_clustered |>
             select(player_szn, cluster),
         by = "player_szn"
@@ -341,3 +348,8 @@ nearest_players |>
 # TODO: For each team, which 2-3 candidates would you investigate further?
 # Use the nearest-neighbor table, PCA map, k-means clusters, and basketball
 # context to explain your recommendations and limitations.
+
+# Detroit: OG Anunoby and Miles Bridges
+# San Antonio: Kevin Porter and Reggie Jackson
+# Utah: Jalen Greena and Darius Garland
+#
