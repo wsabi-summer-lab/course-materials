@@ -1,0 +1,116 @@
+season,round,race_name,circuit,driver_join_id,pit_lap,pit_stop_time_s,constructor,constructor_n,circuit_n,predicted_pit_stop_s,residual_s
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,perez,48,1.9984659999999999,red_bull,16,17,2.274110964310925,-0.27564496431092533
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,hamilton,48,2.000923,mercedes,13,17,1.6620368113074135,0.33888618869258624
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,vettel,48,2.000416,aston_martin,15,17,2.1842127902281145,-0.18379679022811457
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,gasly,48,2.00183,alphatauri,11,17,1.5779308976709492,0.4238991023290508
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,leclerc,48,2.002544,ferrari,15,17,2.0846058917150483,-0.08206189171504841
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,tsunoda,48,2.003526,alphatauri,11,17,1.5779308976709492,0.42559510232905073
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,norris,48,2.010409,mclaren,18,17,1.7621170764362963,0.24829192356370378
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,sainz,48,2.012724,ferrari,15,17,2.0846058917150483,-0.07188189171504833
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,ricciardo,48,2.015163,mclaren,18,17,1.7621170764362963,0.2530459235637035
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,alonso,48,2.014526,alpine,11,17,1.6247445291581273,0.38978147084187276
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,latifi,48,2.048175,williams,11,17,2.7053699699504645,-0.6571949699504644
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,bottas,48,2.035229,mercedes,13,17,1.6620368113074135,0.37319218869258663
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,russell,48,2.036172,williams,11,17,2.7053699699504645,-0.6691979699504644
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,mazepin,47,1.828965,haas,14,17,2.1780272110712486,-0.3490622110712487
+2021,6,Azerbaijan Grand Prix,Baku City Circuit,mickschumacher,48,2.014176,haas,14,17,2.1780272110712486,-0.16385121107124867
+2021,10,British Grand Prix,Silverstone Circuit,leclerc,2,2.047731,ferrari,15,36,2.6356691395385177,-0.5879381395385175
+2021,10,British Grand Prix,Silverstone Circuit,hamilton,2,2.048376,mercedes,13,36,2.2131000591308827,-0.1647240591308825
+2021,10,British Grand Prix,Silverstone Circuit,bottas,2,2.049149,mercedes,13,36,2.2131000591308827,-0.16395105913088281
+2021,10,British Grand Prix,Silverstone Circuit,norris,2,2.052218,mclaren,18,36,2.3131803242597653,-0.2609623242597654
+2021,10,British Grand Prix,Silverstone Circuit,ricciardo,2,2.051281,mclaren,18,36,2.3131803242597653,-0.26189932425976536
+2021,10,British Grand Prix,Silverstone Circuit,vettel,2,2.055222,aston_martin,15,36,2.7352760380515835,-0.6800540380515834
+2021,10,British Grand Prix,Silverstone Circuit,alonso,2,2.05858,alpine,11,36,2.175807776981596,-0.11722777698159614
+2021,10,British Grand Prix,Silverstone Circuit,sainz,2,2.059122,ferrari,15,36,2.6356691395385177,-0.5765471395385178
+2021,10,British Grand Prix,Silverstone Circuit,ocon,2,2.066994,alpine,11,36,2.175807776981596,-0.108813776981596
+2021,10,British Grand Prix,Silverstone Circuit,stroll,2,2.0678609999999997,aston_martin,15,36,2.7352760380515835,-0.6674150380515838
+2021,10,British Grand Prix,Silverstone Circuit,gasly,2,2.067244,alphatauri,11,36,2.1289941454944183,-0.06175014549441826
+2021,10,British Grand Prix,Silverstone Circuit,russell,2,2.072543,williams,11,36,3.2564332177739335,-1.1838902177739334
+2021,10,British Grand Prix,Silverstone Circuit,tsunoda,2,2.075695,alphatauri,11,36,2.1289941454944183,-0.053299145494418276
+2021,10,British Grand Prix,Silverstone Circuit,mickschumacher,2,2.0757280000000002,haas,14,36,2.7290904588947176,-0.6533624588947173
+2021,10,British Grand Prix,Silverstone Circuit,latifi,2,2.0771640000000002,williams,11,36,3.2564332177739335,-1.1792692177739332
+2021,10,British Grand Prix,Silverstone Circuit,mazepin,2,2.076977,haas,14,36,2.7290904588947176,-0.6521134588947177
+2021,10,British Grand Prix,Silverstone Circuit,perez,2,2.0764050000000003,red_bull,16,36,2.825174212134394,-0.7487692121343938
+2022,10,British Grand Prix,Silverstone Circuit,maxverstappen,1,3.0373229999999998,red_bull,16,36,2.825174212134394,0.21214878786560565
+2022,10,British Grand Prix,Silverstone Circuit,sainz,1,3.031752,ferrari,15,36,2.6356691395385177,0.39608286046148233
+2022,10,British Grand Prix,Silverstone Circuit,hamilton,1,3.046888,mercedes,13,36,2.2131000591308827,0.8337879408691173
+2022,10,British Grand Prix,Silverstone Circuit,leclerc,1,3.03636,ferrari,15,36,2.6356691395385177,0.4006908604614825
+2022,10,British Grand Prix,Silverstone Circuit,alonso,1,3.0557,alpine,11,36,2.175807776981596,0.8798922230184036
+2022,10,British Grand Prix,Silverstone Circuit,perez,1,3.034772,red_bull,16,36,2.825174212134394,0.20959778786560568
+2022,10,British Grand Prix,Silverstone Circuit,norris,1,3.043215,mclaren,18,36,2.3131803242597653,0.7300346757402347
+2022,10,British Grand Prix,Silverstone Circuit,latifi,1,3.051904,williams,11,36,3.2564332177739335,-0.2045292177739335
+2022,10,British Grand Prix,Silverstone Circuit,ricciardo,1,3.0633139999999996,mclaren,18,36,2.3131803242597653,0.7501336757402344
+2022,10,British Grand Prix,Silverstone Circuit,gasly,1,3.0489499999999996,alphatauri,11,36,2.1289941454944183,0.9199558545055813
+2022,10,British Grand Prix,Silverstone Circuit,kevinmagnussen,1,3.0636129999999997,haas,14,36,2.7290904588947176,0.3345225411052821
+2022,10,British Grand Prix,Silverstone Circuit,vettel,1,3.067301,aston_martin,15,36,2.7352760380515835,0.3320249619484166
+2022,10,British Grand Prix,Silverstone Circuit,stroll,1,3.0690169999999997,aston_martin,15,36,2.7352760380515835,0.3337409619484162
+2022,10,British Grand Prix,Silverstone Circuit,mickschumacher,1,3.065174,haas,14,36,2.7290904588947176,0.33608354110528227
+2022,10,British Grand Prix,Silverstone Circuit,tsunoda,1,3.0118609999999997,alphatauri,11,36,2.1289941454944183,0.8828668545055813
+2022,10,British Grand Prix,Silverstone Circuit,ocon,1,2.9507600000000003,alpine,11,36,2.175807776981596,0.774952223018404
+2022,15,Dutch Grand Prix,Circuit Park Zandvoort,hamilton,57,14.155,mercedes,13,31,7.334061104430137,6.820938895569863
+2022,15,Dutch Grand Prix,Circuit Park Zandvoort,latifi,55,14.459,williams,11,31,8.377394263073189,6.081605736926811
+2022,15,Dutch Grand Prix,Circuit Park Zandvoort,maxverstappen,57,14.113,red_bull,16,31,7.946135257433649,6.166864742566351
+2022,15,Dutch Grand Prix,Circuit Park Zandvoort,albon,56,14.114,williams,11,31,8.377394263073189,5.736605736926812
+2022,15,Dutch Grand Prix,Circuit Park Zandvoort,mickschumacher,56,14.144,haas,14,31,7.850051504193972,6.2939484958060286
+2022,15,Dutch Grand Prix,Circuit Park Zandvoort,vettel,56,14.349,aston_martin,15,31,7.8562370833508375,6.492762916649163
+2022,15,Dutch Grand Prix,Circuit Park Zandvoort,leclerc,57,14.008,ferrari,15,31,7.756630184837771,6.251369815162228
+2022,15,Dutch Grand Prix,Circuit Park Zandvoort,kevinmagnussen,56,14.175,haas,14,31,7.850051504193972,6.324948495806029
+2022,15,Dutch Grand Prix,Circuit Park Zandvoort,perez,57,14.113,red_bull,16,31,7.946135257433649,6.166864742566351
+2022,15,Dutch Grand Prix,Circuit Park Zandvoort,ricciardo,56,14.493,mclaren,18,31,7.43414136955902,7.05885863044098
+2022,15,Dutch Grand Prix,Circuit Park Zandvoort,ocon,57,14.041,alpine,11,31,7.296768822280851,6.74423117771915
+2022,15,Dutch Grand Prix,Circuit Park Zandvoort,stroll,57,14.118,aston_martin,15,31,7.8562370833508375,6.261762916649163
+2022,15,Dutch Grand Prix,Circuit Park Zandvoort,gasly,57,13.973,alphatauri,11,31,7.249955190793672,6.723044809206328
+2023,3,Australian Grand Prix,Albert Park Grand Prix Circuit,maxverstappen,57,1.8565019999999999,red_bull,16,12,2.1390261169393927,-0.28252411693939283
+2023,3,Australian Grand Prix,Albert Park Grand Prix Circuit,hamilton,57,1.859435,mercedes,13,12,1.5269519639358808,0.3324830360641191
+2023,3,Australian Grand Prix,Albert Park Grand Prix Circuit,sainz,57,1.8615540000000002,ferrari,15,12,1.9495210443435158,-0.08796704434351565
+2023,3,Australian Grand Prix,Albert Park Grand Prix Circuit,hulkenberg,57,1.8690550000000001,haas,14,12,2.0429423636997157,-0.17388736369971558
+2023,3,Australian Grand Prix,Albert Park Grand Prix Circuit,tsunoda,57,1.8712090000000001,alphatauri,11,12,1.4428460502994167,0.4283629497005834
+2023,3,Australian Grand Prix,Albert Park Grand Prix Circuit,norris,57,1.864087,mclaren,18,12,1.6270322290647639,0.2370547709352362
+2023,3,Australian Grand Prix,Albert Park Grand Prix Circuit,piastri,57,1.8662260000000002,mclaren,18,12,1.6270322290647639,0.2391937709352363
+2023,3,Australian Grand Prix,Albert Park Grand Prix Circuit,perez,57,1.8535679999999999,red_bull,16,12,2.1390261169393927,-0.2854581169393928
+2023,3,Australian Grand Prix,Albert Park Grand Prix Circuit,alonso,57,1.8450730000000002,aston_martin,15,12,2.049127942856582,-0.20405494285658188
+2023,3,Australian Grand Prix,Albert Park Grand Prix Circuit,stroll,57,1.845925,aston_martin,15,12,2.049127942856582,-0.20320294285658203
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,perez,63,2.461612,red_bull,16,31,7.946135257433649,-5.484523257433649
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,norris,63,2.443212,mclaren,18,31,7.43414136955902,-4.99092936955902
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,russell,63,2.446251,mercedes,13,31,7.334061104430137,-4.8878101044301365
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,albon,63,2.443475,williams,11,31,8.377394263073189,-5.933919263073189
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,piastri,63,2.434653,mclaren,18,31,7.43414136955902,-4.99948836955902
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,ocon,63,2.432201,alpine,11,31,7.296768822280851,-4.864567822280851
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,tsunoda,63,2.414895,alphatauri,11,31,7.249955190793672,-4.835060190793673
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,stroll,63,2.4107339999999997,aston_martin,15,31,7.8562370833508375,-5.445503083350838
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,hulkenberg,63,2.410704,haas,14,31,7.850051504193972,-5.439347504193972
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,lawson,63,2.3963400000000004,alphatauri,11,31,7.249955190793672,-4.853615190793672
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,kevinmagnussen,63,2.394733,haas,14,31,7.850051504193972,-5.455318504193972
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,maxverstappen,64,2.483382,red_bull,16,31,7.946135257433649,-5.462753257433649
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,alonso,64,2.455302,aston_martin,15,31,7.8562370833508375,-5.400935083350838
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,gasly,64,2.4431689999999997,alpine,11,31,7.296768822280851,-4.8535998222808505
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,sainz,64,2.4431469999999997,ferrari,15,31,7.756630184837771,-5.3134831848377715
+2023,13,Dutch Grand Prix,Circuit Park Zandvoort,hamilton,64,2.431108,mercedes,13,31,7.334061104430137,-4.902953104430137
+2023,16,Japanese Grand Prix,Suzuka Circuit,perez,13,2.485913,red_bull,16,19,1.880121934141192,0.6057910658588079
+2024,4,Japanese Grand Prix,Suzuka Circuit,maxverstappen,1,1.575603,red_bull,16,19,1.880121934141192,-0.304518934141192
+2024,4,Japanese Grand Prix,Suzuka Circuit,perez,1,1.577661,red_bull,16,19,1.880121934141192,-0.30246093414119213
+2024,4,Japanese Grand Prix,Suzuka Circuit,norris,1,1.580116,mclaren,18,19,1.3681280462665633,0.21198795373343682
+2024,4,Japanese Grand Prix,Suzuka Circuit,sainz,1,1.580097,ferrari,15,19,1.6906168615453152,-0.11051986154531512
+2024,4,Japanese Grand Prix,Suzuka Circuit,alonso,1,1.580924,aston_martin,15,19,1.7902237600583815,-0.20929976005838147
+2024,4,Japanese Grand Prix,Suzuka Circuit,piastri,1,1.580204,mclaren,18,19,1.3681280462665633,0.21207595373343668
+2024,4,Japanese Grand Prix,Suzuka Circuit,hamilton,1,1.5806959999999999,mercedes,13,19,1.2680477811376805,0.3126482188623194
+2024,4,Japanese Grand Prix,Suzuka Circuit,leclerc,1,1.583333,ferrari,15,19,1.6906168615453152,-0.1072838615453151
+2024,4,Japanese Grand Prix,Suzuka Circuit,russell,1,1.5812380000000001,mercedes,13,19,1.2680477811376805,0.3131902188623197
+2024,4,Japanese Grand Prix,Suzuka Circuit,hulkenberg,1,1.580886,haas,14,19,1.7840381809015153,-0.20315218090151532
+2024,4,Japanese Grand Prix,Suzuka Circuit,ocon,1,1.586095,alpine,11,19,1.2307554989883942,0.35533950101160583
+2024,4,Japanese Grand Prix,Suzuka Circuit,gasly,1,1.586793,alpine,11,19,1.2307554989883942,0.3560375010116057
+2024,4,Japanese Grand Prix,Suzuka Circuit,stroll,1,1.585911,aston_martin,15,19,1.7902237600583815,-0.2043127600583814
+2024,4,Japanese Grand Prix,Suzuka Circuit,kevinmagnussen,1,1.5846300000000002,haas,14,19,1.7840381809015153,-0.19940818090151513
+2024,4,Japanese Grand Prix,Suzuka Circuit,sargeant,1,1.585267,williams,11,19,2.3113809397807312,-0.7261139397807312
+2024,8,Monaco Grand Prix,Circuit de Monaco,leclerc,1,2.3580259999999997,ferrari,15,16,2.397779260653072,-0.039753260653072164
+2024,8,Monaco Grand Prix,Circuit de Monaco,piastri,1,2.3576449999999998,mclaren,18,16,2.07529044537432,0.2823545546256798
+2024,8,Monaco Grand Prix,Circuit de Monaco,norris,1,2.365538,mclaren,18,16,2.07529044537432,0.29024755462567997
+2024,8,Monaco Grand Prix,Circuit de Monaco,russell,1,2.369363,mercedes,13,16,1.975210180245437,0.39415281975456296
+2024,8,Monaco Grand Prix,Circuit de Monaco,maxverstappen,1,2.3726700000000003,red_bull,16,16,2.587284333248949,-0.21461433324894852
+2024,8,Monaco Grand Prix,Circuit de Monaco,hamilton,1,2.375369,mercedes,13,16,1.975210180245437,0.40015881975456313
+2024,8,Monaco Grand Prix,Circuit de Monaco,albon,1,2.3813899999999997,williams,11,16,3.018543338888488,-0.6371533388884885
+2024,8,Monaco Grand Prix,Circuit de Monaco,gasly,1,2.381893,alpine,11,16,1.937917898096151,0.4439751019038489
+2024,8,Monaco Grand Prix,Circuit de Monaco,stroll,1,2.383588,aston_martin,15,16,2.497386159166138,-0.11379815916613811
+2024,8,Monaco Grand Prix,Circuit de Monaco,alonso,1,2.3894670000000002,aston_martin,15,16,2.497386159166138,-0.10791915916613792
+2024,8,Monaco Grand Prix,Circuit de Monaco,sargeant,1,2.3916,williams,11,16,3.018543338888488,-0.6269433388884882
+2024,8,Monaco Grand Prix,Circuit de Monaco,sainz,1,2.3270720000000003,ferrari,15,16,2.397779260653072,-0.07070726065307165
