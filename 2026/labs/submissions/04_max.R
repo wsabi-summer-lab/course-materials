@@ -14,7 +14,7 @@ library(readr)
 ###############################
 
 # run from 2026/labs/submissions/ or 2026/labs/starter-code/
-ba_data = read_csv("../data/04_ba-2020-2021.csv", show_col_types = FALSE)
+ba_data = read_csv("../data/04_ba-2020-2021.csv.gz", show_col_types = FALSE)
 
 day_1_model = lm(BA_2021 ~ BA_2020, data = ba_data)
 binomial_glm = glm(cbind(H_2021, AB_2021-H_2021) ~ BA_2020, data = ba_data, family = binomial(link = "logit"))
@@ -49,7 +49,7 @@ predict(binomial_glm, newdata = new_player, type = "response")
 ### PART 2: FIELD-GOAL SUCCESS GAM ###
 #######################################
 
-fg_data = read_csv("../data/04_field-goals.csv", show_col_types = FALSE)
+fg_data = read_csv("../data/04_field-goals.csv.gz", show_col_types = FALSE)
 
 n          <- nrow(fg_data)
 train_idx  <- sample(seq_len(n), size = 0.8 * n) 

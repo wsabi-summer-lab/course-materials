@@ -25,7 +25,7 @@ np.random.seed(RANDOM_STATE)
 ##############
 
 # load data
-field_goals = pd.read_csv("../data/03_field-goals.csv")
+field_goals = pd.read_csv("../data/03_field-goals.csv.gz")
 
 # Task 1:
 # - Inspect the field-goal dataset
@@ -178,8 +178,8 @@ print("The model fits very well for the yardlines that are closer to the endzone
 ##############
 
 # load data
-ncaab_results = pd.read_csv("../data/03_ncaab-results.csv")
-ncaab_team_info = pd.read_csv("../data/03_ncaab-teams.csv")
+ncaab_results = pd.read_csv("../data/03_ncaab-results.csv.gz")
+ncaab_team_info = pd.read_csv("../data/03_ncaab-teams.csv.gz")
 
 # Task 1:
 # - Filter the NCAA results to the 2023-2024 season

@@ -14,7 +14,7 @@ library(tidyverse)
 #######################
 
 # load data
-nfl_data = read_csv("../data/06_expected-points.csv")
+nfl_data = read_csv("../data/06_expected-points.csv.gz")
 names(nfl_data)
 
 ## 6.1.4

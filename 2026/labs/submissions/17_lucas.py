@@ -45,14 +45,14 @@ def evaluate_predictions(model_name, split_name, actual, predicted):
 # Load data
 # ─────────────────────────────────────────
 
-pa = pd.read_csv("../data/17_play-action-vs-run.csv")
+pa = pd.read_csv("../data/17_play-action-vs-run.csv.gz")
 pa["playActionPass"] = pa["playActionPass"].astype(int)
 pa["split"] = pd.Categorical(pa["split"], categories=["train", "validation", "test"], ordered=True)
 for col in ["quarter", "down", "offenseFormation", "receiverAlignment"]:
     pa[col] = pa[col].astype("category")
 pa["anyPreSnapMotion"] = pa["anyPreSnapMotion"].map({0: "no_motion_or_shift", 1: "motion_or_shift"}).astype("category")
 
-snap_examples = pd.read_csv("../data/17_snap-examples.csv")
+snap_examples = pd.read_csv("../data/17_snap-examples.csv.gz")
 snap_examples["playActionPass"] = snap_examples["playActionPass"].astype(int)
 snap_examples["side"] = pd.Categorical(snap_examples["side"], categories=["offense", "defense", "football"])
 

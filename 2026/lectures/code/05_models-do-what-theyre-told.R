@@ -15,7 +15,7 @@ library(readr)
 ### SETTINGS ###
 ################
 
-analysis_data_path = "2026/lectures/data/05_ttop-starter-pa.csv"
+analysis_data_path = "2026/lectures/data/05_ttop-starter-pa.csv.gz"
 figure_dir = "2026/lectures/figures"
 years_to_download = c(2018, 2019)
 
@@ -43,7 +43,7 @@ load_retrosheet_events = function(raw_data_dir, years_to_download) {
             raw_data_dir,
             "download.folder",
             "unzipped",
-            paste0("all", year_value, ".csv")
+            paste0("all", year_value, ".csv.gz")
         )) |>
             mutate(year = year_value)
     }))

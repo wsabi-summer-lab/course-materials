@@ -11,7 +11,7 @@ library(tidyverse)
 ##############
 
 # load data
-field_goals = read_csv("../data/04_field-goals.csv")
+field_goals = read_csv("../data/04_field-goals.csv.gz")
 linear_mod= lm(fg_made ~ ydl + kq, data = field_goals)
 logistic_mod = glm(fg_made ~ ydl + kq, data = field_goals, family = "binomial")
 polynomial_mod = lm(fg_made ~ poly(ydl, 2) + poly(kq, 2), data = field_goals)
@@ -63,8 +63,8 @@ ggplot(field_goals, aes(x = ydl, y = fg_made)) +
 library(tidyverse)
 
 # Read data
-ncaab_results   <- read_csv("../data/04_ncaab-results.csv")
-ncaab_team_info <- read_csv("../data/04_ncaab-teams.csv")
+ncaab_results   <- read_csv("../data/04_ncaab-results.csv.gz")
+ncaab_team_info <- read_csv("../data/04_ncaab-teams.csv.gz")
 
 # Filter for 2023 and remove neutrals
 ncaab_2023 <- ncaab_results %>%

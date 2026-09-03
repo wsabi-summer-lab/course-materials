@@ -1,5 +1,5 @@
 # Tianshu's Spotify Prediction Model Evaluation
-# Trains on 19_spotify-train.csv and evaluates on 19_spotify-test.csv
+# Trains on 19_spotify-train.csv.gz and evaluates on 19_spotify-test.csv.gz
 
 library(cluster)
 library(factoextra)
@@ -15,7 +15,7 @@ library(yardstick)
 set.seed(19104)
 
 # Load training data
-spotify_train = read_csv("../data/19_spotify-train.csv")
+spotify_train = read_csv("../data/19_spotify-train.csv.gz")
 
 # Process training data
 spotify_train = spotify_train %>%
@@ -102,7 +102,7 @@ dtrain <- xgb.DMatrix(data = X_train_top, label = y_train)
 final_model <- xgb.train(params, dtrain, nrounds = 100, verbose = 0)
 
 # Load test data
-spotify_test = read_csv("../data/19_spotify-test.csv")
+spotify_test = read_csv("../data/19_spotify-test.csv.gz")
 
 # Process test data the same way
 spotify_test = spotify_test %>%

@@ -25,7 +25,7 @@ head(putts_train)
 
 ```{r}
 
-putts_train = read_csv("~/Documents/GitHub/summer-lab/2025/labs/data/13_putts-train.csv")
+putts_train = read_csv("~/Documents/GitHub/summer-lab/2025/labs/data/13_putts-train.csv.gz")
 
 k <- nrow(putts_train)
 X <- putts_train$X
@@ -84,8 +84,8 @@ head(results)
 # —————————————————————————————
 # 0. Load & merge train/test
 # —————————————————————————————
-putts_train = read_csv("~/Documents/GitHub/summer-lab/2025/labs/data/13_putts-train.csv")
-putts_test = read_csv("~/Documents/GitHub/summer-lab/2025/labs/data/13_putts-test.csv")
+putts_train = read_csv("~/Documents/GitHub/summer-lab/2025/labs/data/13_putts-train.csv.gz")
+putts_test = read_csv("~/Documents/GitHub/summer-lab/2025/labs/data/13_putts-test.csv.gz")
 
 # rename test X → X2 (second‐half percentage)
 names(putts_test)[names(putts_test)=="X"] <- "X2"

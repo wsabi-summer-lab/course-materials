@@ -12,7 +12,7 @@ library(tidyverse)
 ##############
 
 # load data
-nba = read_csv("../data/03_nba-four-factors.csv")
+nba = read_csv("../data/03_nba-four-factors.csv.gz")
 nba <- nba %>% 
   mutate(
     x1 = `EFG%` - `OPP EFG%`,
@@ -101,7 +101,7 @@ MSE_std
 
 
 #3.2 Expected Outcome of a Punt
-punts = read_csv("../data/03_punts.csv")
+punts = read_csv("../data/03_punts.csv.gz")
 mod_linear <- lm(next_ydl ~ ydl + pq, data = punts)
 mod_quad   <- lm(next_ydl ~ ydl + I(ydl^2) + pq,data = punts)
 mod_cubic  <- lm(next_ydl ~ poly(ydl, 3) + pq,data = punts)

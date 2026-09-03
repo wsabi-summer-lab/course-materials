@@ -21,7 +21,7 @@ if (!dir.exists("plots")) dir.create("plots")
 ##############################
 
 # run from 2026/labs/submissions/ or 2026/labs/starter-code/
-nfl_data = read_csv("09_expected-points.csv", show_col_types = FALSE)
+nfl_data = read_csv("09_expected-points.csv.gz", show_col_types = FALSE)
 
 nfl_model_data = nfl_data |>
     mutate(
@@ -246,7 +246,7 @@ cat(sprintf("95%% percentile interval:   [%.4f, %.4f]\n", boot_ci[1], boot_ci[2]
 ################################
 
 nba_players = read_delim(
-    "09_nba-free-throws.csv",
+    "09_nba-free-throws.csv.gz",
     delim = ";",
     show_col_types = FALSE
 )

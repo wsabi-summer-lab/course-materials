@@ -40,7 +40,7 @@ df$x3 <- df$`OPP TOV %` - df$`TOV%`
 # x4: FT Rate - Opponent FT Rate
 df$x4 <- df$`FT Rate` - df$`OPP FT Rate`
 
-write_csv(df, "02_nba-four-factors-updated.csv")
+write_csv(df, "02_nba-four-factors-updated.csv.gz")
 
 summary_stats <- df %>%
   summarise(across(

@@ -3,8 +3,8 @@ library(tidyverse)
 library(splines)
 set.seed(3)
 
-nba_four_factors <- read_csv("02_nba-four-factors.csv")
-punts            <- read_csv("02_punts.csv")
+nba_four_factors <- read_csv("02_nba-four-factors.csv.gz")
+punts            <- read_csv("02_punts.csv.gz")
 
 # Fix: rename the column, then flip its sign with mutate()
 nba <- nba_four_factors %>%

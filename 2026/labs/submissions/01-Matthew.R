@@ -11,7 +11,7 @@ library(tidyverse)
 ##############
 
 # load data
-mlb_team_seasons = read_csv("../data/01_mlb-team-seasons.csv")
+mlb_team_seasons = read_csv("../data/01_mlb-team-seasons.csv.gz")
 
 # transformed regression data for estimating alpha
 pythag_data = mlb_team_seasons %>%
@@ -74,7 +74,7 @@ ggplot(data=pythag_data)+
 ##############
 
 # load data
-mlb_payrolls = read_csv("../data/01_mlb-payrolls.csv")
+mlb_payrolls = read_csv("../data/01_mlb-payrolls.csv.gz")
 
 # remove 2020 covid-shortened season
 payroll_data = mlb_payrolls %>%

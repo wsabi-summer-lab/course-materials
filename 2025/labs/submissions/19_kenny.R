@@ -10,7 +10,7 @@ set.seed(19)
 
 setwd("/Users/kennywatts/Documents/GitHub/summer-lab/2025/labs/data")
 
-spotify_data = read_csv("19_spotify-train.csv")
+spotify_data = read_csv("19_spotify-train.csv.gz")
 
 head(spotify_data)
 

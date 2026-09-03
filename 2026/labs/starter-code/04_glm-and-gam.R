@@ -14,7 +14,7 @@ library(readr)
 ###############################
 
 # run from 2026/labs/submissions/ or 2026/labs/starter-code/
-ba_data = read_csv("../data/04_ba-2020-2021.csv", show_col_types = FALSE)
+ba_data = read_csv("../data/04_ba-2020-2021.csv.gz", show_col_types = FALSE)
 
 # Task 1:
 # - Fit the day-1 style linear regression model BA_2021 ~ BA_2020
@@ -48,7 +48,7 @@ ba_data = read_csv("../data/04_ba-2020-2021.csv", show_col_types = FALSE)
 ### PART 2: FIELD-GOAL SUCCESS GAM ###
 #######################################
 
-fg_data = read_csv("../data/04_field-goals.csv", show_col_types = FALSE)
+fg_data = read_csv("../data/04_field-goals.csv.gz", show_col_types = FALSE)
 
 # Task 1:
 # - Fit at least 3 competing probability models for fg_made

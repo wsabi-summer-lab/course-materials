@@ -11,7 +11,7 @@ library(tidyverse)
 ####################
 
 # load data
-park_data = read_csv("../data/05_park-effects.csv")
+park_data = read_csv("../data/05_park-effects.csv.gz")
 
 head(park_data)
 

@@ -20,7 +20,7 @@ library(tidyr)
 
 set.seed(18)
 
-data_path = "2026/lectures/data/18_nba-clusters.csv"
+data_path = "2026/lectures/data/18_nba-clusters.csv.gz"
 figure_dir = "2026/lectures/figures"
 table_dir = "2026/lectures/tables"
 dir.create(figure_dir, recursive = TRUE, showWarnings = FALSE)

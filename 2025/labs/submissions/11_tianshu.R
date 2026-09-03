@@ -14,7 +14,7 @@ set.seed(11)
 #######################
 
 # load data
-nba_players = read_delim("../data/11_nba-free-throws.csv", delim = ";")
+nba_players = read_delim("../data/11_nba-free-throws.csv.gz", delim = ";")
 
 nba_players = nba_players %>% 
   mutate(FT_total = FT * G) %>%

@@ -18,7 +18,7 @@ set.seed(12)
 ##########################
 
 # load data
-nba_data = read_csv("../data/12_nba-box-scores.csv")
+nba_data = read_csv("../data/12_nba-box-scores.csv.gz")
 # preview data
 head(nba_data)
 
@@ -176,7 +176,7 @@ ggplot(posterior_results, aes(x = game_number, y = mu_hat_posterior, color = nam
 ##########################
 
 # load data
-kick_data = read_csv("../data/12_field-goals.csv")
+kick_data = read_csv("../data/12_field-goals.csv.gz")
 # preview data
 head(kick_data)
 

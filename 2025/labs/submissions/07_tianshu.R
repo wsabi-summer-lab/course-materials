@@ -14,7 +14,7 @@ library(tidyverse)
 #########################
 
 # load data
-diving_data = read_csv("../data/07_diving.csv")
+diving_data = read_csv("../data/07_diving.csv.gz")
 
 # Permutation test
 dive_scores = diving_data %>%
@@ -124,7 +124,7 @@ result <- result %>%
 ############################
 
 # load data
-mlb_data = read_csv("../data/07_tto.csv")
+mlb_data = read_csv("../data/07_tto.csv.gz")
 
 mlb_data = mlb_data %>% 
   mutate(SECOND_TTO = ORDER_CT >= 2) %>%

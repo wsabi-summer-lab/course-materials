@@ -16,7 +16,7 @@ library(data.table)
 ##############
 
 # load data
-nba_four_factors = as.data.table(read_csv("../data/03_nba-four-factors.csv"))
+nba_four_factors = as.data.table(read_csv("../data/03_nba-four-factors.csv.gz"))
 names(nba_four_factors)
 
 # task 1 eda
@@ -98,7 +98,7 @@ print(c("Model 1 RMSE" = rmse1, "Model 2 RMSE (standardized x)" = rmse2))
 ##############
 
 # load data
-punts <- read_csv("../data/03_punts.csv")
+punts <- read_csv("../data/03_punts.csv.gz")
 names(punts) # y = next_ydl
 
 # scatterplots

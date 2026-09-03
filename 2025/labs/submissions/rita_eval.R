@@ -1,5 +1,5 @@
 # Rita's Spotify Prediction Model Evaluation
-# Trains on 19_spotify-train.csv and evaluates on 19_spotify-test.csv
+# Trains on 19_spotify-train.csv.gz and evaluates on 19_spotify-test.csv.gz
 
 library(cluster)
 library(ggplot2)
@@ -15,7 +15,7 @@ library(yardstick)
 set.seed(19)
 
 # Load training data
-spotify_train <- read_csv("../data/19_spotify-train.csv") %>%
+spotify_train <- read_csv("../data/19_spotify-train.csv.gz") %>%
   mutate(
     release_year = `Release Date` %>% str_extract("\\d{2}$") %>% as.integer()
   ) %>%
@@ -101,7 +101,7 @@ final_model <- xgb.train(
 )
 
 # Load test data
-spotify_test <- read_csv("../data/19_spotify-test.csv") %>%
+spotify_test <- read_csv("../data/19_spotify-test.csv.gz") %>%
   mutate(
     release_year = `Release Date` %>% str_extract("\\d{2}$") %>% as.integer()
   ) %>%

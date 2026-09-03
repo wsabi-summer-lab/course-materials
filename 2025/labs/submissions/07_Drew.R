@@ -12,7 +12,7 @@ library(tidyverse)
 #########################
 
 # load data
-diving_data = read_csv("../data/07_diving.csv")
+diving_data = read_csv("../data/07_diving.csv.gz")
 
 diving_disc=diving_data %>% 
 group_by(Event, Diver, DiveNo, Round) %>%
@@ -84,7 +84,7 @@ prem_judge = data.frame(judge = judges_1, true_DOD = true_DODs, p_value = p_valu
 ############################
 
 # load data
-mlb_data = read_csv("../data/07_tto.csv")
+mlb_data = read_csv("../data/07_tto.csv.gz")
 mlb_data = mlb_data %>% 
   mutate(y = EVENT_WOBA_19,
          oc= ORDER_CT,

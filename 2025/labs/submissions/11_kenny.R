@@ -5,7 +5,7 @@ set.seed(11)
 
 setwd("/Users/kennywatts/Documents/GitHub/summer-lab/2025/labs/data")
 
-nba_players = read_delim("11_nba-free-throws.csv", delim = ";")
+nba_players = read_delim("11_nba-free-throws.csv.gz", delim = ";")
 
 nba_players <- nba_players %>%
   mutate(

@@ -7,7 +7,7 @@ library(dplyr)
 
 setwd("/Users/kennywatts/Downloads")
 
-mlb_seasons <- read.csv("02_mlb-team-seasons.csv")
+mlb_seasons <- read.csv("02_mlb-team-seasons.csv.gz")
 
 mlb_seasons <- mlb_seasons %>%
   mutate(x = (log(RS)-log(RA)))
@@ -50,7 +50,7 @@ RE_1.8
 
 # 2.2 Evaluating MLB General Managers
 
-mlb_payrolls <- read.csv("02_mlb-payrolls.csv")
+mlb_payrolls <- read.csv("02_mlb-payrolls.csv.gz")
 
 mlb_payrolls <- subset(mlb_payrolls, yearID != 2020)
 

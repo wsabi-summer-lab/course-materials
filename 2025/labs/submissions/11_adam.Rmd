@@ -21,7 +21,7 @@ set.seed(8)
 #######################
 
 # load data
-nba_players = read_delim("../data/11_nba-free-throws.csv", delim = ";")
+nba_players = read_delim("../data/11_nba-free-throws.csv.gz", delim = ";")
 
 
 alphas = seq(0,10, by = 1)

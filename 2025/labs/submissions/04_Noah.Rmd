@@ -20,7 +20,7 @@ library(tidyverse)
 
 # load data
 ```{r}
-field_goals = read_csv("../data/04_field-goals.csv")
+field_goals = read_csv("../data/04_field-goals.csv.gz")
 
 linearregressionmodel <- lm(fg_made ~ ydl + kq, data = field_goals)
 logit_model <- glm(fg_made ~ ydl + kq, data = field_goals)
@@ -100,8 +100,8 @@ ggplot(test_data, aes(x = pred_spline, color = factor(fg_made), fill = factor(fg
 # load data
 
 ```{r}
-ncaab_results = read_csv("../data/04_ncaab-results.csv")
-ncaab_team_info = read_csv("../data/04_ncaab-teams.csv")
+ncaab_results = read_csv("../data/04_ncaab-results.csv.gz")
+ncaab_team_info = read_csv("../data/04_ncaab-teams.csv.gz")
 
 ncaab_23 <- ncaab_results %>%
   filter(Season == 2023)

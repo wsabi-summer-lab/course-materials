@@ -17,7 +17,7 @@ import matplotlib.patches as mpatches
 ##############
 
 # load data
-mlb_team_seasons = pd.read_csv("../data/01_mlb-team-seasons.csv")
+mlb_team_seasons = pd.read_csv("../data/01_mlb-team-seasons.csv.gz")
 
 # transformed regression data for estimating alpha
 pythag_data = mlb_team_seasons.copy()
@@ -166,7 +166,7 @@ WPs based on RS/RA have a greater potential to outperform their predicted WPs by
 ##############
 
 # load data
-mlb_payrolls = pd.read_csv("../data/01_mlb-payrolls.csv")
+mlb_payrolls = pd.read_csv("../data/01_mlb-payrolls.csv.gz")
 
 payroll_data = mlb_payrolls[
     mlb_payrolls["year_id"] != 2020

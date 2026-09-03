@@ -20,7 +20,7 @@ set.seed(11)
 #######################
 
 # load data
-nba_players = read_delim("../data/11_nba-free-throws.csv", delim = ";")
+nba_players = read_delim("../data/11_nba-free-throws.csv.gz", delim = ";")
 glimpse(nba_players)
 nba_players = nba_players %>%
   mutate(FTA=round(FTA*G,0), 

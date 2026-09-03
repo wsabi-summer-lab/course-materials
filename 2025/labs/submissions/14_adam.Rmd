@@ -24,7 +24,7 @@ set.seed(14)
 #################
 
 # load NFL games data from 2018-2023
-nfl_data = read_csv("../data/14_nfl-games.csv")
+nfl_data = read_csv("../data/14_nfl-games.csv.gz")
 # preview data
 head(nfl_data)
 

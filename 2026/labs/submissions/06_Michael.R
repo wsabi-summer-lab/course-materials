@@ -11,17 +11,17 @@ library(readr)
 set.seed(7)
 
 setwd("C:/Users/micha/OneDrive/Documents/GitHub/lab-materials/2026/labs/data")
-diving <- read.csv("06_diving.csv")
+diving <- read.csv("06_diving.csv.gz")
 
 ##############
 ### PART 1 ###
 ##############
 
 # load data
-diving_data = read_csv("../data/06_diving.csv", show_col_types = FALSE)
+diving_data = read_csv("../data/06_diving.csv.gz", show_col_types = FALSE)
 library(dplyr)
 
-diving <- read.csv("06_diving.csv")
+diving <- read.csv("06_diving.csv.gz")
 
 judges <- unique(diving$Judge)
 results <- data.frame(Judge = character(), ObsStat = numeric(), PValue = numeric())
@@ -67,7 +67,7 @@ print(results)
 ##############
 
 # load data
-tto_data = read_csv("../data/06_tto.csv", show_col_types = FALSE)
+tto_data = read_csv("../data/06_tto.csv.gz", show_col_types = FALSE)
 
 # Variable map for the lecture notation:
 # - y_i      = EVENT_WOBA_19

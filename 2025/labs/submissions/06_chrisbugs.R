@@ -13,7 +13,7 @@ library(tidyverse)
 #######################
 
 # load data
-nfl_data = read_csv("../data/06_expected-points.csv")
+nfl_data = read_csv("../data/06_expected-points.csv.gz")
 
 # print 50 rows of the dataset
 print(nfl_data, n = 50)

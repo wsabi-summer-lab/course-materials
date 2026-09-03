@@ -22,7 +22,7 @@ set.seed(18)
 ###########################
 
 # ------------------ LOAD DATA ------------------
-nfl_data <- read_csv("../data/18_nfl-wp.csv")
+nfl_data <- read_csv("../data/18_nfl-wp.csv.gz")
 
 # ------------------ PREVIEW DATA ------------------
 head(nfl_data)

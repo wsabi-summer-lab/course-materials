@@ -61,7 +61,7 @@ def beta_predictive_summary(wins, attempts, alpha, beta, future_attempts=50, dra
 ### NBA FREE THROWS ###
 #######################
 
-nba_raw = pd.read_csv("../data/11_nba-free-throws.csv", delimiter=";", encoding="latin-1")
+nba_raw = pd.read_csv("../data/11_nba-free-throws.csv.gz", delimiter=";", encoding="latin-1")
 
 tot_players = nba_raw[nba_raw["Tm"] == "TOT"]["Player"]
 

@@ -15,7 +15,7 @@ set.seed(12)
 ##########################
 
 # load data
-nba_data = read_csv("../data/12_nba-box-scores.csv")
+nba_data = read_csv("../data/12_nba-box-scores.csv.gz")
 # preview data
 head(nba_data)
 
@@ -125,7 +125,7 @@ nba_post %>% select(namePlayer, dateGame, j, points_per_possession, post_mu) %>%
 ##########################
 
 # load data
-kick_data = read_csv("../data/12_field-goals.csv")
+kick_data = read_csv("../data/12_field-goals.csv.gz")
 # preview data
 head(kick_data)
 

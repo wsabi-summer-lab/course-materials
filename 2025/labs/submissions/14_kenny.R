@@ -7,7 +7,7 @@ set.seed(14)
 
 setwd("/Users/kennywatts/Documents/GitHub/summer-lab/2025/labs/data")
 
-nfl_data = read_csv("14_nfl-games.csv")
+nfl_data = read_csv("14_nfl-games.csv.gz")
 
 head(nfl_data)
 

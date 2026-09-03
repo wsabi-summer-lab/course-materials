@@ -14,7 +14,7 @@ library(tidyverse)
 ##############
 
 # load data
-mlb_team_seasons = read_csv("../data/03_nba-four-factors.csv")
+mlb_team_seasons = read_csv("../data/03_nba-four-factors.csv.gz")
 
 nba_four_factors = mlb_team_seasons
 
@@ -170,7 +170,7 @@ ggplot(comparison_df, aes(x = Model, y = MSE)) +
 ##############
 
 # load data
-mlb_payrolls = read_csv("../data/03_punts.csv")
+mlb_payrolls = read_csv("../data/03_punts.csv.gz")
 
 punts = mlb_payrolls
 

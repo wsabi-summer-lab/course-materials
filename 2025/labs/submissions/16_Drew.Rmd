@@ -16,7 +16,7 @@ set.seed(16)
 ####################
 
 # load park effects data
-park_effects = read_csv("../data/16_park-effects.csv")
+park_effects = read_csv("../data/16_park-effects.csv.gz")
 # preview data
 head(park_effects)
 

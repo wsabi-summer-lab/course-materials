@@ -48,7 +48,7 @@ if (length(missing_seasons) > 0) {
     warning(
         "The win-probability data are missing season(s): ",
         paste(missing_seasons, collapse = ", "),
-        ". Update ../data/16_win-probability.csv before completing this lab."
+        ". Update ../data/16_win-probability.csv.gz before completing this lab."
     )
 }
 
@@ -68,7 +68,7 @@ split_counts = c(
 if (any(split_counts == 0)) {
     stop(
         "One or more season splits is empty. This lab expects ",
-        "../data/16_win-probability.csv to contain seasons 2021-2025."
+        "../data/16_win-probability.csv.gz to contain seasons 2021-2025."
     )
 }
 

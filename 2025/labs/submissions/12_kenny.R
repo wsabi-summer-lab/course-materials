@@ -6,7 +6,7 @@ set.seed(12)
 
 setwd("/Users/kennywatts/Documents/GitHub/summer-lab/2025/labs/data")
 
-nba_data = read_csv("12_nba-box-scores.csv")
+nba_data = read_csv("12_nba-box-scores.csv.gz")
 
 head(nba_data)
 
@@ -144,7 +144,7 @@ ggplot(overall_rmse, aes(x = tau2, y = avg_rmse)) +
 
 
 
-kick_data = read_csv("12_field-goals.csv")
+kick_data = read_csv("12_field-goals.csv.gz")
 
 head(kick_data)
 

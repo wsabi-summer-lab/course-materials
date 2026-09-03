@@ -31,7 +31,7 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 
-nba_four_factors <- read_csv("../data/03_nba-four-factors.csv") %>%
+nba_four_factors <- read_csv("../data/03_nba-four-factors.csv.gz") %>%
   mutate(
     x1 = `EFG%`      - `OPP EFG%`,
     x2 = `OREB%`     - `OPP REB %`,
@@ -176,7 +176,7 @@ They are the same
 ```{r}
 library(splines)  
 
-NFL = read_csv("../data/03_punts.csv")
+NFL = read_csv("../data/03_punts.csv.gz")
 fit_ydl <- lm(
   next_ydl ~ bs(ydl, df = 4, degree = 3) + pq,
   data = NFL

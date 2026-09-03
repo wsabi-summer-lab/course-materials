@@ -21,7 +21,7 @@ set.seed(19)
 ####################
 
 #––– 1. READ & PREPARE ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-spotify_data <- read_csv("data/19_spotify-train.csv") %>%
+spotify_data <- read_csv("data/19_spotify-train.csv.gz") %>%
   mutate(
     release_year = `Release Date` %>% str_extract("\\d{2}$") %>% as.integer()
   ) %>%

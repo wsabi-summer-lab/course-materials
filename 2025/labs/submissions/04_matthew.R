@@ -11,7 +11,7 @@ library(tidyverse)
 ##############
 
 # load data
-field_goals = read_csv("data/04_field-goals.csv")
+field_goals = read_csv("data/04_field-goals.csv.gz")
 
 # inspect data
 glimpse(field_goals)
@@ -135,8 +135,8 @@ library(ggplot2)
 library(readr)
 
 # Load data
-ncaab_results = read_csv("data/04_ncaab-results.csv")
-ncaab_team_info = read_csv("data/04_ncaab-teams.csv")
+ncaab_results = read_csv("data/04_ncaab-results.csv.gz")
+ncaab_team_info = read_csv("data/04_ncaab-teams.csv.gz")
 glimpse(ncaab_team_info)
 # Filter season 2023 and create home/away scores and teams
 ncaab_results_2023 <- ncaab_results %>%

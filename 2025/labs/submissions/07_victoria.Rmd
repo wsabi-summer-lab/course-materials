@@ -5,7 +5,7 @@
 library(ggplot2)
 library(tidyverse)
 #1 - permutation test for diving data 
-diving = read.csv("../data/07_diving.csv")
+diving = read.csv("../data/07_diving.csv.gz")
 head(diving)
 
 judges = unique(diving$Judge)
@@ -71,7 +71,7 @@ Michael Geissbuhler, Hans-Peter Burk, Walter ALT, and Peter HUBER have the highe
 
 ```{r}
 #fit model 1 from 7.2.1
-tto = read.csv("../data/07_tto.csv")
+tto = read.csv("../data/07_tto.csv.gz")
 head(tto)
 
 

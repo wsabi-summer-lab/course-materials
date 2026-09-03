@@ -6,7 +6,7 @@ library(readr)
 # set seed
 set.seed(7)
 
-diving_data <- read_csv("06_diving.csv", show_col_types = FALSE)
+diving_data <- read_csv("06_diving.csv.gz", show_col_types = FALSE)
 
 #task 1
 diving_data <- diving_data %>%
@@ -136,7 +136,7 @@ print(p1)
 #part 2 
 
 # load data
-tto_data <- read_csv("06_tto.csv", show_col_types = FALSE)
+tto_data <- read_csv("06_tto.csv.gz", show_col_types = FALSE)
 
 # Variable map:  y_i = EVENT_WOBA_19,  t_i = ORDER_CT
 #                BQ_i = WOBA_FINAL_BAT_19,  PQ_i = WOBA_FINAL_PIT_19

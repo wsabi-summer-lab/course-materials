@@ -187,15 +187,15 @@ standardize_train_new = function(train_data, new_data, cols) {
 data_path = "/Users/mackenziebuckner/Desktop/lab-materials/2026/labs/data/19_shots.csv"
 
 if (!file.exists(data_path)) {
-  data_path = "2026/labs/data/19_shots.csv"
+  data_path = "2026/labs/data/19_shots.csv.gz"
 }
 
 if (!file.exists(data_path)) {
-  data_path = "19_shots.csv"
+  data_path = "19_shots.csv.gz"
 }
 
 if (!file.exists(data_path)) {
-  stop("Could not find 19_shots.csv. Move the file into your working directory or update data_path.")
+  stop("Could not find 19_shots.csv.gz. Move the file into your working directory or update data_path.")
 }
 
 shots = read_csv(data_path, show_col_types = FALSE) |>

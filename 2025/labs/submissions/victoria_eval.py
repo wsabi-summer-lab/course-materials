@@ -1,5 +1,5 @@
 # Victoria's Spotify Prediction Model Evaluation
-# Trains on 19_spotify-train.csv and evaluates on 19_spotify-test.csv
+# Trains on 19_spotify-train.csv.gz and evaluates on 19_spotify-test.csv.gz
 
 import pandas as pd
 import numpy as np
@@ -13,7 +13,7 @@ warnings.filterwarnings('ignore')
 np.random.seed(42)
 
 # Load training data
-spotify_train = pd.read_csv("../data/19_spotify-train.csv")
+spotify_train = pd.read_csv("../data/19_spotify-train.csv.gz")
 
 # Filter to users with at least 10 songs
 user_counts = spotify_train['Added by'].value_counts()
@@ -49,7 +49,7 @@ rf_model = RandomForestClassifier(
 rf_model.fit(X_train_scaled, y_train)
 
 # Load test data
-spotify_test = pd.read_csv("../data/19_spotify-test.csv")
+spotify_test = pd.read_csv("../data/19_spotify-test.csv.gz")
 
 # Process test data the same way
 spotify_test = spotify_test[spotify_test['Added by'].isin(valid_users)]

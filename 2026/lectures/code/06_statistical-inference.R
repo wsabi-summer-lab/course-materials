@@ -13,7 +13,7 @@ library(readr)
 ################
 
 figure_dir = "2026/lectures/figures"
-diving_path = "2026/lectures/data/06_diving.csv"
+diving_path = "2026/lectures/data/06_diving.csv.gz"
 judge_name = "McFARLAND Steve"
 
 dir.create(figure_dir, recursive = TRUE, showWarnings = FALSE)

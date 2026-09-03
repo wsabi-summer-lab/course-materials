@@ -17,7 +17,7 @@ set.seed(16)
 ####################
 
 # Load data
-park_effects <- read_csv("../data/16_park-effects.csv")
+park_effects <- read_csv("../data/16_park-effects.csv.gz")
 
 ####################
 # 1. True parameters

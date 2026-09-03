@@ -14,7 +14,7 @@ library(readr)
 #################
 
 draft_data = read_csv(
-    "2026/lectures/data/02_nfl-draft-second-contracts.csv",
+    "2026/lectures/data/02_nfl-draft-second-contracts.csv.gz",
     show_col_types = FALSE
 )
 

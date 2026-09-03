@@ -20,7 +20,7 @@ python3 model/chrisbugs_competition.py
 then evaluate:
 python3 model/evaluate_final_model.py {your csv path here}
 
-ex: python3 evaluate_final_model.py /Users/chrisbugs/summer-lab/2025/labs/data/19_spotify-train.csv
+ex: python3 evaluate_final_model.py /Users/chrisbugs/summer-lab/2025/labs/data/19_spotify-train.csv.gz
 """
 import pandas as pd
 import numpy as np
@@ -31,7 +31,7 @@ import joblib
 from pathlib import Path
 
 # Replace with your data path
-INPUT_PATH = "../../../data/19_spotify-train.csv"
+INPUT_PATH = "../../../data/19_spotify-train.csv.gz"
 # Preprocessor path for saving the preprocessing pipeline
 PREPROCESSOR_PATH = Path(__file__).resolve().parent / "preprocessor.joblib"
 

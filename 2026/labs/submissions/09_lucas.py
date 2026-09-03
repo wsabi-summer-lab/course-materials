@@ -19,7 +19,7 @@ np.random.seed(9)
 ##############################
 
 # run from 2026/labs/submissions/ or 2026/labs/starter-code/
-nfl_data = pd.read_csv("../data/09_expected-points.csv")
+nfl_data = pd.read_csv("../data/09_expected-points.csv.gz")
 nfl_data["log_ydstogo"] = np.log(nfl_data["ydstogo"])
 
 score_values = np.sort(nfl_data["pts_next_score"].unique())
@@ -174,7 +174,7 @@ print("Treats plays as independent but they are not --> plays influence the next
 ### PART 2: NBA FREE THROWS ####
 ################################
 
-nba_players = pd.read_csv("../data/09_nba-free-throws.csv", sep=";", encoding="latin-1")
+nba_players = pd.read_csv("../data/09_nba-free-throws.csv.gz", sep=";", encoding="latin-1")
 
 # Task 1:
 # - Recreate the player-level free-throw dataset from Lab 8

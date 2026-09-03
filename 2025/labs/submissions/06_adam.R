@@ -14,7 +14,7 @@ library(tidyverse)
 
 # load data
 setwd("filepath")
-nfl_data = read_csv("2025/labs/data/06_expected-points.csv")
+nfl_data = read_csv("2025/labs/data/06_expected-points.csv.gz")
 
 
 model1 = multinom(pts_next_score ~ yardline_100, nfl_data)

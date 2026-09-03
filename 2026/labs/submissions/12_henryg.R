@@ -41,7 +41,7 @@ beta_prior_from_rates = function(made, attempts) {
 ### BATTING AVERAGES ###
 ########################
 
-batting = read_csv("../data/12_ba-2020-2021.csv", show_col_types = FALSE) |>
+batting = read_csv("../data/12_ba-2020-2021.csv.gz", show_col_types = FALSE) |>
     filter(AB_2020 > 0)
 
 
@@ -235,7 +235,7 @@ scaled_results |>
 ### FIELD GOALS ###
 ###################
 
-field_goals = read_csv("../data/12_field-goals.csv", show_col_types = FALSE) |>
+field_goals = read_csv("../data/12_field-goals.csv.gz", show_col_types = FALSE) |>
     mutate(
         distance_group = case_when(
             ydl <= 20 ~ "short",

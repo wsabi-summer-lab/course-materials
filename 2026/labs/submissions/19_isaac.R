@@ -173,18 +173,18 @@ standardize_train_new = function(train_data, new_data, cols) {
 #################
 
 # This tries several common file locations.
-# If your CSV is in the same folder as this R script, "19_shots.csv" should work.
+# If your CSV is in the same folder as this R script, "19_shots.csv.gz" should work.
 possible_paths = c(
-  "19_shots.csv",
-  "../data/19_shots.csv",
-  "2026/labs/data/19_shots.csv",
-  "/mnt/data/19_shots.csv"
+  "19_shots.csv.gz",
+  "../data/19_shots.csv.gz",
+  "2026/labs/data/19_shots.csv.gz",
+  "/mnt/data/19_shots.csv.gz"
 )
 
 data_path = possible_paths[file.exists(possible_paths)][1]
 
 if (is.na(data_path)) {
-  stop("Could not find 19_shots.csv. Put it in your working directory or update data_path manually.")
+  stop("Could not find 19_shots.csv.gz. Put it in your working directory or update data_path manually.")
 }
 
 shots = read_csv(data_path, show_col_types = FALSE) |>

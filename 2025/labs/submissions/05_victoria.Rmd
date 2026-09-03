@@ -6,7 +6,7 @@
 library(ggplot2)
 library(tidyverse)
 
-innings = read.csv("../data/05_park-effects.csv")
+innings = read.csv("../data/05_park-effects.csv.gz")
 head(innings, 12)
 mean_runs <- innings %>% 
   group_by(INNING) %>%

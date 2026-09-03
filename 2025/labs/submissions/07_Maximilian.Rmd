@@ -20,7 +20,7 @@ pacman::p_load(tidyverse, dplyr, ggthemes, data.table, lubridate, glmnet,
 ```
 
 ```{r}
-diving_data <- read_csv("../data/07_diving.csv")
+diving_data <- read_csv("../data/07_diving.csv.gz")
 dive_sub <- diving_data %>%
   select(Diver, Country, DiveNo, JScore, Judge, JCountry, Round, Event)
 #dive_sub$Diver <- as.factor(dive_sub$Diver)
@@ -200,7 +200,7 @@ no_match_judges
 
 
 ```{r}
-mlb_data <- read_csv("../data/07_tto.csv")
+mlb_data <- read_csv("../data/07_tto.csv.gz")
 head(mlb_data)
 unique(mlb_data$ORDER_CT)
 ```

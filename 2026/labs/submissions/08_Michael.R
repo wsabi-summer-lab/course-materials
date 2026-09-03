@@ -13,7 +13,7 @@ set.seed(8)
 setwd("C:/Users/micha/OneDrive/Documents/GitHub/lab-materials/2026/labs/data")
 
 # load data
-nba_players <- read_delim("08_nba-free-throws.csv", delim = ";", show_col_types = FALSE)
+nba_players <- read_delim("08_nba-free-throws.csv.gz", delim = ";", show_col_types = FALSE)
 
 # Task 1: build player-level summary
 ft <- nba_players %>%

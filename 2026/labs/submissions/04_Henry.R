@@ -26,7 +26,7 @@ if (!dir.exists("plots")) dir.create("plots")
 ###############################
 
 # Use the CSV file in this folder
-ba_data = read_csv("04_ba-2020-2021.csv", show_col_types = FALSE)
+ba_data = read_csv("04_ba-2020-2021.csv.gz", show_col_types = FALSE)
 
 # Task 1:
 # - Fit the day-1 style linear regression model BA_2021 ~ BA_2020
@@ -150,7 +150,7 @@ print(round(ba_interval(p_hat, 600), 4))
 ### PART 2: FIELD-GOAL SUCCESS GAM ###
 #######################################
 
-fg_data = read_csv("04_field-goals.csv", show_col_types = FALSE)
+fg_data = read_csv("04_field-goals.csv.gz", show_col_types = FALSE)
 
 ####################################################
 ### Task 1: Fit competing probability models.    ###

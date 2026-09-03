@@ -36,7 +36,7 @@ library(ggplot2)
 library(dplyr)
 library(tidyverse)
 
-team_seasons <- as.data.table(read.csv("data/02_mlb-team-seasons.csv"))
+team_seasons <- as.data.table(read.csv("data/02_mlb-team-seasons.csv.gz"))
 
 team_seasons$log_ratio_RS_RA <- log(team_seasons$RS / team_seasons$RA)
 team_seasons$log_odds_WP <- log((team_seasons$WP) / (1 - team_seasons$WP))
@@ -89,7 +89,7 @@ re_old <- 1 - (sd(old_model$residuals) / sd(team_seasons$WP))
 #-----------------------------------------------------------------------------------------------------
 # afternoon lab part 2 (payrolls)
 
-payrolls <- as.data.table(read.csv("data/02_mlb-payrolls.csv"))
+payrolls <- as.data.table(read.csv("data/02_mlb-payrolls.csv.gz"))
 names(payrolls)
 
 payrolls <- payrolls %>% filter(yearID != 2020)

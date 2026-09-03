@@ -17,8 +17,8 @@ library(data.table)
 xgplus_root = path.expand(Sys.getenv("XGPLUS_ROOT", "~/wsabi/lab/projects/xg-plus"))
 merged_dir = file.path(xgplus_root, "data", "merged_data")
 
-lecture_data_path = "2026/lectures/data/19_shots.csv"
-lab_data_path = "2026/labs/data/19_shots.csv"
+lecture_data_path = "2026/lectures/data/19_shots.csv.gz"
+lab_data_path = "2026/labs/data/19_shots.csv.gz"
 
 season = "2024-2025"
 competition = "pl"
@@ -29,7 +29,7 @@ competition = "pl"
 
 source_files = list.files(
     merged_dir,
-    pattern = paste0("^train_", competition, "_", season, "_[0-9]+\\.csv$"),
+    pattern = paste0("^train_", competition, "_", season, "_[0-9]+\\.csv\\.gz$"),
     full.names = TRUE
 )
 

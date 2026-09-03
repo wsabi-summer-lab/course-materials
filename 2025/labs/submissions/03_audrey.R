@@ -1,6 +1,6 @@
 install.packages(tidyverse)
 library(tidyverse) 
-nba_data <- read.csv("03_nba-four-factors.csv", stringsAsFactors = FALSE)
+nba_data <- read.csv("03_nba-four-factors.csv.gz", stringsAsFactors = FALSE)
 
 head(nba_data)
 names(nba_data)

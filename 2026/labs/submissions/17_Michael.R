@@ -39,7 +39,7 @@ evaluate_predictions = function(model, split_name, actual, predicted) {
 ### LOAD DATA ##
 ################
 
-pa = read_csv("../data/17_play-action-vs-run.csv", show_col_types = FALSE) |>
+pa = read_csv("../data/17_play-action-vs-run.csv.gz", show_col_types = FALSE) |>
     mutate(
         playActionPass = as.integer(playActionPass),
         split = factor(split, levels = c("train", "validation", "test")),
@@ -54,7 +54,7 @@ pa = read_csv("../data/17_play-action-vs-run.csv", show_col_types = FALSE) |>
         )
     )
 
-snap_examples = read_csv("../data/17_snap-examples.csv", show_col_types = FALSE) |>
+snap_examples = read_csv("../data/17_snap-examples.csv.gz", show_col_types = FALSE) |>
     mutate(
         playActionPass = as.integer(playActionPass),
         side = factor(side, levels = c("offense", "defense", "football"))

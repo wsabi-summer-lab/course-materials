@@ -12,7 +12,7 @@ library(readr)
 ##############
 
 # load data
-diving_data = read_csv("../data/06_diving.csv", show_col_types = FALSE)
+diving_data = read_csv("../data/06_diving.csv.gz", show_col_types = FALSE)
 
 diving_data = diving_data %>%
   group_by(Event, Round, Diver, DiveNo) %>%
@@ -130,7 +130,7 @@ judge_list <- judge_list %>%
 ##############
 
 # load data
-tto_data = read_csv("../data/06_tto.csv", show_col_types = FALSE)
+tto_data = read_csv("../data/06_tto.csv.gz", show_col_types = FALSE)
 
 # Variable map for the lecture notation:
 # - y_i      = EVENT_WOBA_19

@@ -20,7 +20,7 @@ options(mc.cores = parallel::detectCores())
 ### NFL GAMES ###
 #################
 
-nfl = read_csv("../data/14_nfl-games.csv") |>
+nfl = read_csv("../data/14_nfl-games.csv.gz") |>
     filter(season_type == "REG", season == 2023)
 
 teams = sort(unique(c(nfl$home_team, nfl$away_team)))

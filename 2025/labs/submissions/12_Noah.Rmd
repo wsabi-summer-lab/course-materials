@@ -21,7 +21,7 @@ set.seed(12)
 ##########################
 
 ```{r}
-nba <- read_csv("~/Documents/GitHub/summer-lab/2025/labs/data/12_nba-box-scores.csv", col_types = cols(
+nba <- read_csv("~/Documents/GitHub/summer-lab/2025/labs/data/12_nba-box-scores.csv.gz", col_types = cols(
   namePlayer  = col_character(),
   dateGame    = col_date(format = "%Y-%m-%d"),
   possessions = col_double(),
@@ -231,7 +231,7 @@ ggplot(
 
 
 ```{r}
-kick_data = read_csv("../data/12_field-goals.csv")
+kick_data = read_csv("../data/12_field-goals.csv.gz")
 head(kick_data)
 
 

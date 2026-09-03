@@ -11,7 +11,7 @@ library(rstan)
 library(tidyverse)
 library(ggplot2)
 
-nfl_data = read.csv("../data/14_nfl-games.csv")
+nfl_data = read.csv("../data/14_nfl-games.csv.gz")
 head(nfl_data)
 teams <- sort(unique(c(nfl_data$home_team, nfl_data$away_team)))
 team_indices <- setNames(seq_along(teams), teams)

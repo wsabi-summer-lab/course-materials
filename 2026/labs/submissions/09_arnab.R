@@ -17,7 +17,7 @@ set.seed(9)
 ##############################
 
 # run from 2026/labs/submissions/ or 2026/labs/starter-code/
-nfl_data = read_csv("../data/09_expected-points.csv", show_col_types = FALSE)
+nfl_data = read_csv("../data/09_expected-points.csv.gz", show_col_types = FALSE)
 
 nfl_model_data = nfl_data |>
     mutate(
@@ -186,7 +186,7 @@ bootstrap_ci = quantile(
 ################################
 
 nba_players = read_delim(
-    "../data/09_nba-free-throws.csv",
+    "../data/09_nba-free-throws.csv.gz",
     delim = ";",
     show_col_types = FALSE
 )

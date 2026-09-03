@@ -1,5 +1,5 @@
 # Max's Spotify Prediction Model Evaluation
-# Trains on 19_spotify-train.csv and evaluates on 19_spotify-test.csv
+# Trains on 19_spotify-train.csv.gz and evaluates on 19_spotify-test.csv.gz
 
 library(tidyverse)
 library(glmnet)
@@ -12,7 +12,7 @@ library(yardstick)
 set.seed(17761)
 
 # Load training data
-data <- read.csv("../data/19_spotify-train.csv")
+data <- read.csv("../data/19_spotify-train.csv.gz")
 
 # One-hot encode all unique genre values
 data_onehot <- data %>%
@@ -201,7 +201,7 @@ stack_fit <- cv.glmnet(
 best_s <- stack_fit$lambda.1se
 
 # Load test data
-test_data <- read.csv("../data/19_spotify-test.csv")
+test_data <- read.csv("../data/19_spotify-test.csv.gz")
 
 # One hot encode all values found in the Genre feature
 test_onehot <- test_data %>%

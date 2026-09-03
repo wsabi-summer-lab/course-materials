@@ -14,7 +14,7 @@ set.seed(4)
 ##############
 
 # load data
-field_goals = read_csv("../data/03_field-goals.csv")
+field_goals = read_csv("../data/03_field-goals.csv.gz")
 
 # Model 1: Multiple Linear Regression
 lm_model = lm(fg_made ~ ydl + kq, data = field_goals)

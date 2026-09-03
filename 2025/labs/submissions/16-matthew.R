@@ -14,7 +14,7 @@ set.seed(16)
 ### LOAD PARK EFFECTS ###
 #########################
 
-park_effects <- read_csv("../data/16_park-effects.csv")
+park_effects <- read_csv("../data/16_park-effects.csv.gz")
 
 # Generate true coefficients
 B0 <- 0.4

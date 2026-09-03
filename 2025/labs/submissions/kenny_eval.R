@@ -1,5 +1,5 @@
 # Kenny's Spotify Prediction Model Evaluation
-# Trains on 19_spotify-train.csv and evaluates on 19_spotify-test.csv
+# Trains on 19_spotify-train.csv.gz and evaluates on 19_spotify-test.csv.gz
 
 library(MLmetrics)
 library(tidyverse)
@@ -12,7 +12,7 @@ library(yardstick)
 set.seed(80085)
 
 # Load training data
-spotify_train = read_csv("../data/19_spotify-train.csv")
+spotify_train = read_csv("../data/19_spotify-train.csv.gz")
 
 # Filter to users with at least 10 songs
 spotify_train <- spotify_train %>%
@@ -53,7 +53,7 @@ final_model <- cv.glmnet(
 )
 
 # Load test data
-spotify_test = read_csv("../data/19_spotify-test.csv")
+spotify_test = read_csv("../data/19_spotify-test.csv.gz")
 
 # Process test data the same way
 spotify_test$`Release Date` <- as.Date(spotify_test$`Release Date`, format = "%m/%d/%y")

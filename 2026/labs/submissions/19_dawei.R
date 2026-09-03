@@ -121,7 +121,7 @@ standardize_train_new = function(train_data, new_data, cols) {
 
 data_path = "C:/Users/sundw/Downloads/19_shots.csv"
 if (!file.exists(data_path)) {
-    data_path = "2026/labs/data/19_shots.csv"
+    data_path = "2026/labs/data/19_shots.csv.gz"
 }
 
 shots = read_csv(data_path, show_col_types = FALSE) |>

@@ -24,7 +24,7 @@ set.seed(11)
 
 ```{r}
 
-nba <- read_delim("../data/11_nba-free-throws.csv", delim=";")
+nba <- read_delim("../data/11_nba-free-throws.csv.gz", delim=";")
 
 player_stats <- nba %>%
   group_by(Player) %>%
@@ -51,7 +51,7 @@ credible_per_player <- crossing(player_stats, grid_ab) %>%
 ```{r}
 set.seed(8)
 
-nba_players <- read_delim("../data/08_nba-free-throws.csv", delim = ";") %>%
+nba_players <- read_delim("../data/08_nba-free-throws.csv.gz", delim = ";") %>%
   mutate(
     FT  = `FT`  * G,    
     FTA = `FTA` * G
@@ -119,7 +119,7 @@ library(dplyr)
 library(ggplot2)
 
 # 1. Load & aggregate season data
-nba_players <- read_delim("../data/08_nba-free-throws.csv", delim = ";") %>%
+nba_players <- read_delim("../data/08_nba-free-throws.csv.gz", delim = ";") %>%
   mutate(
     FT  = `FT`  * G,   
     FTA = `FTA` * G
@@ -182,7 +182,7 @@ ggplot(sample_df, aes(x = FT_pct, y = reorder(Player, FT_pct))) +
 ```{r}
 set.seed(11)
 
-nba_players <- read_delim("../data/08_nba-free-throws.csv", delim = ";") %>%
+nba_players <- read_delim("../data/08_nba-free-throws.csv.gz", delim = ";") %>%
   mutate(
     FT  = `FT`  * G,
     FTA = `FTA` * G

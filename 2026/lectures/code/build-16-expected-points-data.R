@@ -19,10 +19,10 @@ library(tidyr)
 
 seasons = 2021:2025
 expected_points_paths = c(
-    "2026/lectures/data/16_expected-points.csv",
-    "2026/labs/data/05_expected-points.csv"
+    "2026/lectures/data/16_expected-points.csv.gz",
+    "2026/labs/data/05_expected-points.csv.gz"
 )
-win_probability_path = "2026/labs/data/16_win-probability.csv"
+win_probability_path = "2026/labs/data/16_win-probability.csv.gz"
 
 for (output_path in c(expected_points_paths, win_probability_path)) {
     dir.create(dirname(output_path), recursive = TRUE, showWarnings = FALSE)

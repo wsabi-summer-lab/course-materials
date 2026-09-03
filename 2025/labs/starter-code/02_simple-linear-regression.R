@@ -11,11 +11,11 @@ library(tidyverse)
 ##############
 
 # load data
-mlb_team_seasons = read_csv("../02_mlb-team-seasons.csv")
+mlb_team_seasons = read_csv("../02_mlb-team-seasons.csv.gz")
 
 ##############
 ### PART 2 ###
 ##############
 
 # load data
-mlb_payrolls = read_csv("../02_mlb-payrolls.csv")
+mlb_payrolls = read_csv("../02_mlb-payrolls.csv.gz")

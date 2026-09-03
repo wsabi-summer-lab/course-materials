@@ -16,7 +16,7 @@ set.seed(6)
 ##############
 
 # run from 2026/labs/submissions/ or 2026/labs/starter-code/
-nfl_data = read_csv("../data/05_expected-points.csv")
+nfl_data = read_csv("../data/05_expected-points.csv.gz")
 
 # Task 1:
 # - Fit a multinomial logistic regression for pts_next_score using yardline_100 only

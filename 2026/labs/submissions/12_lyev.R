@@ -41,7 +41,7 @@ beta_prior_from_rates = function(made, attempts) {
 ### BATTING AVERAGES ###
 ########################
 
-raw_data = read_csv("../data/12_ba-2020-2021.csv", show_col_types = FALSE) |>
+raw_data = read_csv("../data/12_ba-2020-2021.csv.gz", show_col_types = FALSE) |>
   filter(AB_2020 > 0)
 
 Z# Method-of-moments estimated prior from the 2020 player population.
@@ -159,7 +159,7 @@ rmse_half = summarise(batting_tau_half, rmse = sqrt(mean((empirical_bayes - BA_2
 ### FIELD GOALS ###
 ###################
 
-field_goals = read_csv("../data/12_field-goals.csv", show_col_types = FALSE) |>
+field_goals = read_csv("../data/12_field-goals.csv.gz", show_col_types = FALSE) |>
   mutate(
     distance_group = case_when(
       ydl <= 20 ~ "short",

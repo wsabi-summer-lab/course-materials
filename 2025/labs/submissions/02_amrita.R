@@ -1,7 +1,7 @@
 #task 1.1
 library(tidyverse)
 setwd("/Users/amritabalajee/downloads")
-mlb_team_seasons = read.csv("02_mlb-team-seasons.csv")
+mlb_team_seasons = read.csv("02_mlb-team-seasons.csv.gz")
 mlb_team_seasons$X <- log(mlb_team_seasons$RS / mlb_team_seasons$RA)
 mlb_team_seasons$Y <- log(mlb_team_seasons$WP / (1 - mlb_team_seasons$WP))
 model <- lm(Y ~ X, data = mlb_team_seasons)
@@ -24,7 +24,7 @@ ggplot(data, aes(x = model_name, y = re)) +
   theme_minimal()
 
 #task 2.1
-mlb_payroll = read.csv("02_mlb-payrolls.csv")
+mlb_payroll = read.csv("02_mlb-payrolls.csv.gz")
 payroll_no_2020 = subset(mlb_payroll, yearID != 2020)
 ggplot(mlb_payroll, aes(x = Payroll.Median, y = WP)) +
   geom_point() +

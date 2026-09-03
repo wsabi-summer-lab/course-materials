@@ -63,7 +63,7 @@ ggplot(data.frame(boot_props), aes(x = boot_props)) +
 
 # load data
 set.seed(8)
-nba_players = read_delim("../data/08_nba-free-throws.csv", delim = ";")
+nba_players = read_delim("../data/08_nba-free-throws.csv.gz", delim = ";")
 
 nba_players25 = nba_players %>%
   group_by(Player) %>% 

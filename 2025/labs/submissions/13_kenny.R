@@ -5,7 +5,7 @@ set.seed(13)
 
 setwd("/Users/kennywatts/Documents/GitHub/summer-lab/2025/labs/data")
 
-putts_train = read_csv("13_putts-train.csv")
+putts_train = read_csv("13_putts-train.csv.gz")
 
 head(putts_train)
 
@@ -77,7 +77,7 @@ putts_train$p_i_eb2 <- (sin(putts_train$theta_i_eb2))^2
 
 # Out of sample loss
 
-putts_test = read_csv("13_putts-test.csv")
+putts_test = read_csv("13_putts-test.csv.gz")
 
 head(putts_test)
 

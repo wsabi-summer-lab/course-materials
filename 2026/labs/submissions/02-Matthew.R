@@ -14,7 +14,7 @@ set.seed(3)
 ##############
 
 # load data
-nba_four_factors = read_csv("../data/02_nba-four-factors.csv")
+nba_four_factors = read_csv("../data/02_nba-four-factors.csv.gz")
 nba_four_factors=nba_four_factors %>% 
   filter(GP==82) %>% 
   mutate(`Protecting Factor`=-`Protecting Factor`)
@@ -198,7 +198,7 @@ cat("Standardized Model RMSE:", rmse_standardized, "\n")
 ##############
 
 # load data
-punts = read_csv("../data/02_punts.csv")
+punts = read_csv("../data/02_punts.csv.gz")
 summary(punts)
 colnames(punts)
 # Task 1:

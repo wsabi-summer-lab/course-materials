@@ -15,7 +15,7 @@ library(tidyverse)
 #########################
 
 # load data
-diving_data = read_csv("../data/07_diving.csv")
+diving_data = read_csv("../data/07_diving.csv.gz")
 names(diving_data)
 
 # find number of unique judges
@@ -107,7 +107,7 @@ output
 ############################
 
 # load data
-mlb_data = read_csv("../data/07_tto.csv")
+mlb_data = read_csv("../data/07_tto.csv.gz")
 names(mlb_data)
 
 mlb_data <- mlb_data %>% 

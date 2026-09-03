@@ -14,7 +14,7 @@ set.seed(11)
 #######################
 
 # Step 0: Load and preprocess data
-nba_players <- read_delim("../data/11_nba-free-throws.csv", delim = ";") %>%
+nba_players <- read_delim("../data/11_nba-free-throws.csv.gz", delim = ";") %>%
   mutate(
     TFTM_Team = round(G * FT),
     TFTA_Team = round(G * FTA)

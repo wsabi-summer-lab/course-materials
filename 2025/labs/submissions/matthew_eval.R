@@ -1,5 +1,5 @@
 # Matthew's Spotify Prediction Model Evaluation
-# Trains on 19_spotify-train.csv and evaluates on 19_spotify-test.csv
+# Trains on 19_spotify-train.csv.gz and evaluates on 19_spotify-test.csv.gz
 
 library(tidyverse)
 library(mclust)
@@ -14,7 +14,7 @@ library(yardstick)
 set.seed(19846)
 
 # Load training data
-spotify_train <- read_csv("../data/19_spotify-train.csv")
+spotify_train <- read_csv("../data/19_spotify-train.csv.gz")
 
 # Filter to valid contributors (>= 10 songs)
 valid_contributors <- spotify_train %>%
@@ -71,7 +71,7 @@ final_rf <- ranger(
 )
 
 # Load test data
-spotify_test <- read_csv("../data/19_spotify-test.csv")
+spotify_test <- read_csv("../data/19_spotify-test.csv.gz")
 
 # Process test data the same way
 spotify_test_filtered <- spotify_test %>%

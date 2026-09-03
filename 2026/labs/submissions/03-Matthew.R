@@ -14,7 +14,7 @@ set.seed(4)
 ##############
 
 # load data
-field_goals = read_csv("../data/03_field-goals.csv")
+field_goals = read_csv("../data/03_field-goals.csv.gz")
 
 # Task 1:
 # - Inspect the field-goal dataset
@@ -216,8 +216,8 @@ ggplot() +
 ##############
 
 # load data
-ncaab_results = read_csv("../data/03_ncaab-results.csv")
-ncaab_team_info = read_csv("../data/03_ncaab-teams.csv")
+ncaab_results = read_csv("../data/03_ncaab-results.csv.gz")
+ncaab_team_info = read_csv("../data/03_ncaab-teams.csv.gz")
 
 # Task 1:
 # - Filter the NCAA results to the 2023-2024 season

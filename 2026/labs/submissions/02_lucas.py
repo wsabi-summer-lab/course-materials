@@ -21,7 +21,7 @@ RANDOM_STATE = 3
 ##############
 
 # load data (same file the R script referenced)
-nba = pd.read_csv("../data/02_nba-four-factors.csv")
+nba = pd.read_csv("../data/02_nba-four-factors.csv.gz")
 
 nba['eFG']     = (nba['FGM'] + 0.5 * nba['3PM']) / nba['FGA']
 nba['opp_eFG'] = (nba['OPP_FGM'] + 0.5 * nba['OPP_3PM']) / nba['OPP_FGA']
@@ -219,7 +219,7 @@ print("Both models produce the same RMSE because a linear transformation does no
 ##############
 
 # load data (punts)
-punts = pd.read_csv("../data/02_punts.csv")
+punts = pd.read_csv("../data/02_punts.csv.gz")
 
 # Task 1:
 # - Plot post-punt yard line against starting yard line

@@ -15,7 +15,7 @@ set.seed(3)
 ##############
 
 # load data
-nba_four_factors = read_csv("../data/02_nba-four-factors.csv")
+nba_four_factors = read_csv("../data/02_nba-four-factors.csv.gz")
 
 #switch protecting factor
 nba_four_factors = nba_four_factors %>%
@@ -262,7 +262,7 @@ rmse_stand_pred = sqrt(sum(nba_test$residual_pred_stand^2)/(n-p)) # = 3.95
 ##############
 
 # load data
-punts = read_csv("../data/02_punts.csv")
+punts = read_csv("../data/02_punts.csv.gz")
 
 #Task 1: explore the data
 

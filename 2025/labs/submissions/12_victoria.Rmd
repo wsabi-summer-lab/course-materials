@@ -7,7 +7,7 @@ output: html_notebook
 
 ```{r}
 #Write a formula for posterior mean of normal-normal model 
-nba = read.csv('../data/12_nba-box-scores.csv')
+nba = read.csv('../data/12_nba-box-scores.csv.gz')
 head(nba)
 
 library(ggplot2)
@@ -207,7 +207,7 @@ nba_sample_df %>%
 Task 1 - fit field goal probability as function of ydl
 ```{r}
 library(splines)
-nfl = read.csv('../data/12_field-goals.csv')
+nfl = read.csv('../data/12_field-goals.csv.gz')
 head(nfl)
 
 model = glm(fg_made ~ ydl, data = nfl, family = binomial(link = "logit"))

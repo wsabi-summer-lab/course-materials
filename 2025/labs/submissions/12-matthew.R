@@ -5,7 +5,7 @@ library(tidyverse)
 set.seed(12)
 
 # Load data
-nba_data <- read_csv("../data/12_nba-box-scores.csv") %>%
+nba_data <- read_csv("../data/12_nba-box-scores.csv.gz") %>%
   mutate(pct = pts / possessions) %>%
   arrange(idPlayer, idGame) %>%
   group_by(idPlayer) %>%
@@ -101,7 +101,7 @@ ggplot(df_plot, aes(x = game_index, y = posterior_mean, color = as.factor(idPlay
 ##########################
 
 # load data
-kick_data = read_csv("../data/12_field-goals.csv")
+kick_data = read_csv("../data/12_field-goals.csv.gz")
 # preview data
 head(kick_data)
 

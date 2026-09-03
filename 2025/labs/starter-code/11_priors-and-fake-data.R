@@ -14,4 +14,4 @@ set.seed(11)
 #######################
 
 # load data
-nba_players = read_delim("../data/11_nba-free-throws.csv", delim = ";")
+nba_players = read_delim("../data/11_nba-free-throws.csv.gz", delim = ";")

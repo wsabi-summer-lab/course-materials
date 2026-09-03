@@ -11,7 +11,7 @@ library(tidyverse)
 ####################
 
 # load data
-park_data = read_csv("../data/05_park-effects.csv")
+park_data = read_csv("../data/05_park-effects.csv.gz")
 # find mean of each the mean runs scored in a half-inning at each PARK
 # group by park and calculate mean runs scored
 park_effects1 = park_data %>%

@@ -42,7 +42,7 @@ def beta_prior_from_rates(made, attempts):
 ### BATTING AVERAGES ###
 ########################
 
-batting = pd.read_csv("../data/12_ba-2020-2021.csv")
+batting = pd.read_csv("../data/12_ba-2020-2021.csv.gz")
 batting = batting[batting["AB_2020"] > 0]
 
 # Method-of-moments estimated prior from the 2020 player population.
@@ -198,7 +198,7 @@ print("RMSE with scale by 1x (no multiple); as you increase lambda, the shrinkag
 ### FIELD GOALS ###
 ###################
 
-field_goals = pd.read_csv("../data/12_field-goals.csv")
+field_goals = pd.read_csv("../data/12_field-goals.csv.gz")
 field_goals["distance_group"] = pd.cut(
     field_goals["ydl"],
     bins=[-np.inf, 20, 35, np.inf],

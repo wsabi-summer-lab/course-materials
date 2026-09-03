@@ -6,7 +6,7 @@ output: html_notebook
 Task 1 - fit equations 
 
 ```{r}
-putting = read.csv('../data/13_putts-train.csv')
+putting = read.csv('../data/13_putts-train.csv.gz')
 head(putting)
 
 #equation 13.1 - global mean 
@@ -104,7 +104,7 @@ head(putting_cleaned)
 Task 2 - compare estimates to test data with MSE 
 
 ```{r}
-putting_test = read.csv('../data/13_putts-test.csv')
+putting_test = read.csv('../data/13_putts-test.csv.gz')
 mse <- function(predicted, actual) {
   mean((predicted - actual)^2)
 }

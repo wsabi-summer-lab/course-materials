@@ -18,7 +18,7 @@ library(tidyverse)
 # Bill James's classic alpha = 2.
 
 # load data
-mlb_team_seasons = read_csv("01_mlb-team-seasons.csv")
+mlb_team_seasons = read_csv("01_mlb-team-seasons.csv.gz")
 
 # ---------------------------------------------------------------------------
 # TASK 1: Estimate the Pythagorean exponent alpha via linear regression.
@@ -181,7 +181,7 @@ print(p_resid_pythag)
 # relative to its spending -- NOT a causal estimate of GM ability.
 
 # load data
-mlb_payrolls = read_csv("01_mlb-payrolls.csv")
+mlb_payrolls = read_csv("01_mlb-payrolls.csv.gz")
 
 # ---------------------------------------------------------------------------
 # TASK 1:

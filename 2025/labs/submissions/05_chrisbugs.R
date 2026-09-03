@@ -11,7 +11,7 @@ library(tidyverse)
 ####################
 
 # load data
-park_data = read_csv("../data/05_park-effects.csv")
+park_data = read_csv("../data/05_park-effects.csv.gz")
 park_data
 
 # Compute mean runs scored in each half inning at each ballpark

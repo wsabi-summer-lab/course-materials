@@ -11,7 +11,7 @@ library(tidyverse)
 ##############
 
 # load team-season data
-mlb_team_seasons <- read_csv("~/Desktop/01_mlb-team-seasons.csv")
+mlb_team_seasons <- read_csv("~/Desktop/01_mlb-team-seasons.csv.gz")
 
 # transform variables used in the Pythagorean exponent model
 pythag_data = mlb_team_seasons %>%
@@ -105,7 +105,7 @@ ggplot(pythag_data, aes(x = fitted_logit, y = residual)) +
 ##############
 
 # load payroll data
-mlb_payrolls <- read_csv("~/Desktop/01_mlb-payrolls.csv")
+mlb_payrolls <- read_csv("~/Desktop/01_mlb-payrolls.csv.gz")
 
 # remove 2020 covid-shortened season
 payroll_data = mlb_payrolls %>%

@@ -14,7 +14,7 @@ library(readr)
 ###############################
 
 # run from 2026/labs/submissions/ or 2026/labs/starter-code/
-ba_data = read_csv("../data/04_ba-2020-2021.csv", show_col_types = FALSE)
+ba_data = read_csv("../data/04_ba-2020-2021.csv.gz", show_col_types = FALSE)
 
 # Task 1:
 # Linear regression
@@ -95,7 +95,7 @@ cat("600 AB - 95% CI for BA:", ci_high, "\n")
 ### PART 2: FIELD-GOAL SUCCESS GAM ###
 #######################################
 
-fg_data = read_csv("../data/04_field-goals.csv", show_col_types = FALSE)
+fg_data = read_csv("../data/04_field-goals.csv.gz", show_col_types = FALSE)
 
 # Task 1:
 glm_simple <- glm(fg_made ~ ydl, 

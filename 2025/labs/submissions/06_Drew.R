@@ -13,7 +13,7 @@ library(tidyverse)
 #######################
 
 # load data
-nfl_data = read_csv("../data/06_expected-points.csv")
+nfl_data = read_csv("../data/06_expected-points.csv.gz")
 nfl_data = nfl_data %>%
   mutate(EP = pts_next_score,
          YL = yardline_100,

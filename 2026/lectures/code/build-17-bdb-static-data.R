@@ -21,9 +21,9 @@ bdb_dir = "/Users/Jonathan/wsabi/lab/projects/nfl-workload/data/bdb-2025"
 output_dir = "2026/lectures/data"
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
-play_output_path = file.path(output_dir, "17_bdb-static-plays.csv")
-snap_output_path = file.path(output_dir, "17_bdb-static-snap.csv")
-feature_output_path = file.path(output_dir, "17_bdb-static-features.csv")
+play_output_path = file.path(output_dir, "17_bdb-static-plays.csv.gz")
+snap_output_path = file.path(output_dir, "17_bdb-static-snap.csv.gz")
+feature_output_path = file.path(output_dir, "17_bdb-static-features.csv.gz")
 
 weeks = 1:9
 

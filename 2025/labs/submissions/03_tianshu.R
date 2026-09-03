@@ -14,7 +14,7 @@ setwd("/Users/tianshufeng/Documents/GitHub/summer-lab/2025/labs/data")
 ##############
 
 # load data
-nba_factors = read_csv("03_nba-four-factors.csv")
+nba_factors = read_csv("03_nba-four-factors.csv.gz")
 
 nba_factors = nba_factors %>% 
   mutate(x1 = `EFG%` / `OPP EFG%`) %>%
@@ -79,7 +79,7 @@ nba_factors_test %>% ggplot(aes(x = W)) +
 ##############
 
 # load data
-punts = read_csv("03_punts.csv")
+punts = read_csv("03_punts.csv.gz")
 
 punts %>% ggplot(aes(x = ydl, y = next_ydl)) +
   geom_point() + labs(title = "ydl vs next_ydl")

@@ -6,7 +6,7 @@ library(Metrics)
 
 setwd("/Users/kennywatts/Documents/GitHub/summer-lab/2025/labs/data")
 
-park_data = read_csv("05_park-effects.csv")
+park_data = read_csv("05_park-effects.csv.gz")
 
 set.seed(123)
 

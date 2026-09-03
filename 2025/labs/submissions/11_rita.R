@@ -14,7 +14,7 @@ set.seed(11)
 #######################
 
 # load data
-nba = read.csv('../data/08_nba-free-throws.csv', sep = ';')
+nba = read.csv('../data/08_nba-free-throws.csv.gz', sep = ';')
 head(nba)
 
 

@@ -1,7 +1,7 @@
 install.packages("tidyverse")
 library("tidyverse")
 setwd("~/Downloads/Labs/Data")
-mlb_team_seasons = read_csv("02_mlb-team-seasons.csv")
+mlb_team_seasons = read_csv("02_mlb-team-seasons.csv.gz")
 model_data = mlb_team_seasons %>% 
   mutate(
     X=log(RS/RA),
@@ -31,7 +31,7 @@ ggplot(model_data, aes(WP_hat_classic, WP)) +
 
 #Assignment 2
 setwd("~/Downloads/Labs/Data")
-payroll <- read_csv("02_mlb-payrolls.csv") %>%
+payroll <- read_csv("02_mlb-payrolls.csv.gz") %>%
   rename(
     payroll_ratio = `Payroll/Median`,
     log_ratio     = `Log (Payroll/Median)`

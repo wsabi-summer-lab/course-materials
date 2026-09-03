@@ -75,7 +75,7 @@ ggplot()+
 #######################
 
 # Load and clean data
-nba_players <- read_delim("../data/09_nba-free-throws.csv", delim = ";")
+nba_players <- read_delim("../data/09_nba-free-throws.csv.gz", delim = ";")
 
 nba_players <- nba_players %>%
   mutate(

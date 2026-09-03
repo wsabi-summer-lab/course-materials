@@ -61,7 +61,7 @@ beta_predictive_summary = function(
 ### NBA FREE THROWS ###
 #######################
 
-nba_raw = read_delim("../data/11_nba-free-throws.csv", delim = ";")
+nba_raw = read_delim("../data/11_nba-free-throws.csv.gz", delim = ";")
 
 nba_players = nba_raw |>
   filter(Tm == "TOT" | !Player %in% nba_raw$Player[nba_raw$Tm == "TOT"]) |>

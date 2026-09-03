@@ -8,7 +8,7 @@ setwd("/Users/kennywatts/Documents/GitHub/summer-lab/2025/labs/data")
 
 set.seed(16)
 
-park_effects = read_csv("16_park-effects.csv")
+park_effects = read_csv("16_park-effects.csv.gz")
 
 head(park_effects)
 

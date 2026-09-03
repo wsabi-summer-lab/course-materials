@@ -80,7 +80,7 @@ nearest_ps_match <- function(data, treat = "timeout_now", score = "ps_hat") {
 
 # One row per NBA timeout-decision opportunity, prebuilt from regular-season
 # play-by-play for seasons 2021-2022 through 2025-2026.
-analysis_data <- read_csv("../data/07_timeout-opportunities.csv", show_col_types = FALSE)
+analysis_data <- read_csv("../data/07_timeout-opportunities.csv.gz", show_col_types = FALSE)
 
 if (nrow(analysis_data) == 0) {
   stop("The timeout-opportunity dataset is empty.")

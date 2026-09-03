@@ -14,4 +14,4 @@ set.seed(5)
 ####################
 
 # load data
-park_data = read_csv("../data/05_park-effects.csv")
+park_data = read_csv("../data/05_park-effects.csv.gz")

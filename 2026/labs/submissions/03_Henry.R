@@ -33,7 +33,7 @@ to_moneyline <- function(p) {
 ##############
 
 # load data
-field_goals = read_csv("03_field-goals.csv")
+field_goals = read_csv("03_field-goals.csv.gz")
 
 # Task 1:
 # - Inspect the field-goal dataset
@@ -228,8 +228,8 @@ ggsave("plots/p1_task5_fitted_prob_vs_yardline.png", p1_task5, width = 9, height
 ##############
 
 # load data
-ncaab_results = read_csv("03_ncaab-results.csv")
-ncaab_team_info = read_csv("03_ncaab-teams.csv")
+ncaab_results = read_csv("03_ncaab-results.csv.gz")
+ncaab_team_info = read_csv("03_ncaab-teams.csv.gz")
 
 # Task 1:
 # - Filter the NCAA results to the 2023-2024 season

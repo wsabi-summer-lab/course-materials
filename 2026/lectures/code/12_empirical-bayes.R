@@ -20,7 +20,7 @@ suppressPackageStartupMessages({
 ################
 
 figure_dir = "2026/lectures/figures"
-data_path = "2026/lectures/data/12_ba-2020-2021.csv"
+data_path = "2026/lectures/data/12_ba-2020-2021.csv.gz"
 dir.create(figure_dir, recursive = TRUE, showWarnings = FALSE)
 
 theme_week = theme_minimal(base_size = 12) +

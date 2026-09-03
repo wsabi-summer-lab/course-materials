@@ -1,5 +1,5 @@
 # Adam's Spotify Prediction Model Evaluation
-# Trains on 19_spotify-train.csv and evaluates on 19_spotify-test.csv
+# Trains on 19_spotify-train.csv.gz and evaluates on 19_spotify-test.csv.gz
 
 library(tidyverse)
 library(caret)
@@ -12,7 +12,7 @@ library(yardstick)
 set.seed(70377)
 
 # Load training data
-spotify_train = read_csv("../data/19_spotify-train.csv")
+spotify_train = read_csv("../data/19_spotify-train.csv.gz")
 
 # Process training data - genre one-hot encoding
 df_long <- spotify_train %>%
@@ -67,7 +67,7 @@ xgb_model <- xgb.train(
 )
 
 # Load test data
-spotify_test = read_csv("../data/19_spotify-test.csv")
+spotify_test = read_csv("../data/19_spotify-test.csv.gz")
 
 # Process test data the same way
 df_long_test <- spotify_test %>%

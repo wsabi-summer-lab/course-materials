@@ -14,7 +14,7 @@ set.seed(19846)
 ### DATA PREPROCESSING ###
 ##########################
 
-spotify_data <- read_csv("../data/19_spotify-train.csv")
+spotify_data <- read_csv("../data/19_spotify-train.csv.gz")
 
 valid_contributors <- spotify_data %>%
   count(`Added by`) %>%

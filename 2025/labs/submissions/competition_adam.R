@@ -17,7 +17,7 @@ set.seed(70377)
 ### SPOTIFY DATA ###
 
 # read in data
-spotify_data = read_csv("../data/19_spotify-train.csv")
+spotify_data = read_csv("../data/19_spotify-train.csv.gz")
 
 # preview data
 head(spotify_data)
@@ -43,7 +43,7 @@ set.seed(70377)
 
 
 # read in data
-spotify_data = read_csv("../data/19_spotify-train.csv")
+spotify_data = read_csv("../data/19_spotify-train.csv.gz")
 
 # preview data
 head(spotify_data)
@@ -353,7 +353,7 @@ final_final_model = xgb.train(
 # ---- get values ----
 ### 
 # Read in actual test data
-spotify_test = read_csv("../data/19_spotify-test.csv")
+spotify_test = read_csv("../data/19_spotify-test.csv.gz")
 
 # Process test data the same way as training data
 df_long_test <- spotify_test %>%

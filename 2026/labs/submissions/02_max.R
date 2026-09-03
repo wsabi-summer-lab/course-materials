@@ -14,7 +14,7 @@ set.seed(3)
 ##############
 
 # load data
-nba_four_factors = read_csv("../data/02_nba-four-factors.csv")
+nba_four_factors = read_csv("../data/02_nba-four-factors.csv.gz")
 head(nba_four_factors)
 
 #computing and adding each variable as a column
@@ -165,7 +165,7 @@ rmse(test$W, pred_std)
 ##############
 
 # load data
-punts = read_csv("../data/02_punts.csv")
+punts = read_csv("../data/02_punts.csv.gz")
 
 ggplot(data = punts, aes(x = ydl, y = next_ydl)) + geom_point(alpha = 0.4)
 

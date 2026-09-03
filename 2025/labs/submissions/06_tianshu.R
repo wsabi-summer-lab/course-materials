@@ -13,7 +13,7 @@ library(tidyverse)
 #######################
 
 # load data
-nfl_data = read_csv("../data/06_expected-points.csv")
+nfl_data = read_csv("../data/06_expected-points.csv.gz")
 
 model1 = multinom(factor(pts_next_score) ~ yardline_100, data = nfl_data)
 summary(model1)

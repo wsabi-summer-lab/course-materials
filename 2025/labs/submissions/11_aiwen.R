@@ -18,7 +18,7 @@ set.seed(11)
 #######################
 
 # load data
-nba_players = read_delim("../data/11_nba-free-throws.csv", delim = ";")
+nba_players = read_delim("../data/11_nba-free-throws.csv.gz", delim = ";")
 
 ## code from last week: wald and agresti-coulli intervals for each player
 nba_players_subset <- nba_players %>%

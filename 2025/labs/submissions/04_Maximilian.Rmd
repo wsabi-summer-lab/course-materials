@@ -20,7 +20,7 @@ pacman::p_load(tidyverse, dplyr, ggthemes, data.table, lubridate, glmnet,
 ```
 
 ```{r}
-field_goals <- read_csv("../data/04_field-goals.csv")
+field_goals <- read_csv("../data/04_field-goals.csv.gz")
 ```
 ```{r}
 #field_goals$fg_made <- as.factor(field_goals$fg_made)
@@ -208,8 +208,8 @@ ggplot(results_data, aes(x = linear_preds, y = true_labels)) +
 
 
 ```{r}
-ncaab_results = read_csv("../data/04_ncaab-results.csv")
-ncaab_teams = read_csv("../data/04_ncaab-teams.csv")
+ncaab_results = read_csv("../data/04_ncaab-results.csv.gz")
+ncaab_teams = read_csv("../data/04_ncaab-teams.csv.gz")
 ```
 
 Below we fit a Bradley-Terry Logistic Model predicting home team wins based on the team IDs of the home and away teams. The model is fit using a design matrix that encodes the home and away teams as binary variables, with the home team coded as 1 and the away team coded as -1. The intercept represents average home team advantage. We drop all neutral site games from the data prior to fitting.

@@ -5,11 +5,11 @@ Evaluate the saved final Bayesian softmax model on a new out-of-sample CSV
 of the same format as the training data.
 
 Usage:
-    python evaluate_final_model.py path/to/new_data.csv
+    python evaluate_final_model.py path/to/new_data.csv.gz
 
     python3 evaluate_final_model.py {csv_path}
 
-    python3 evaluate_final_model.py /Users/chrisbugs/summer-lab/2025/labs/data/19_spotify-train.csv
+    python3 evaluate_final_model.py /Users/chrisbugs/summer-lab/2025/labs/data/19_spotify-train.csv.gz
 """
 
 import sys
@@ -46,6 +46,6 @@ def main(csv_path: str):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python evaluate_final_model.py <new_data.csv>")
+        print("Usage: python evaluate_final_model.py <new_data.csv.gz>")
         sys.exit(1)
     main(sys.argv[1])

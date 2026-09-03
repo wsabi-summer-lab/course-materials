@@ -18,7 +18,7 @@ if (!dir.exists("plots")) dir.create("plots")
 
 # load data
 nba_players = read_delim(
-  "08_nba-free-throws.csv",
+  "08_nba-free-throws.csv.gz",
   delim = ";",
   show_col_types = FALSE
 )

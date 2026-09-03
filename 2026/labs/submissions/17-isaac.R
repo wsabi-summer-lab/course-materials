@@ -21,7 +21,7 @@ library(scales)
 # In RStudio, you can check with:
 # getwd()
 
-pa <- read_csv("17_play-action-vs-run.csv")
+pa <- read_csv("17_play-action-vs-run.csv.gz")
 
 # Quick check
 glimpse(pa)

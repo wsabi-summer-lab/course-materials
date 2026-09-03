@@ -18,7 +18,7 @@ set.seed(18)
 ###########################
 
 # read in data
-nfl_data = read_csv("../data/18_nfl-wp.csv")
+nfl_data = read_csv("../data/18_nfl-wp.csv.gz")
 
 # preview data
 head(nfl_data)

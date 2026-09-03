@@ -15,7 +15,7 @@ library(dplyr)
 #######################
 
 # load data
-nfl_data = read_csv("data/06_expected-points.csv")
+nfl_data = read_csv("data/06_expected-points.csv.gz")
 glimpse(nfl_data)
 # create histograms for ydstogo yardline_100 and a bar graph for pts_next_score
 ggplot(nfl_data, aes(x = yardline_100)) +

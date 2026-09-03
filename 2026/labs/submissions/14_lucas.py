@@ -1,3 +1,17 @@
+
+# Added by the 2026-08-27 inactive-project compression migration.
+_codex_builtin_open = open
+
+
+def _codex_open_maybe_gzip(path, mode="r", *args, **kwargs):
+    """Open gzip-suffixed text files transparently; preserve normal/binary opens."""
+    path_text = str(path)
+    if path_text.lower().endswith(".gz") and "b" not in mode:
+        kwargs.pop("buffering", None)
+        text_mode = mode if "t" in mode else mode + "t"
+        return __import__("gzip").open(path, text_mode, *args, **kwargs)
+    return _codex_builtin_open(path, mode, *args, **kwargs)
+
 #######################
 ### Authors: RB, JP ###
 #######################
@@ -17,7 +31,7 @@ np.random.seed(14)
 ### NFL GAMES ###
 #################
 
-nfl = pd.read_csv("../data/14_nfl-games.csv")
+nfl = pd.read_csv("../data/14_nfl-games.csv.gz")
 nfl = nfl[(nfl["season_type"] == "REG") & (nfl["season"] == 2023)].copy()
 
 teams = sorted(set(nfl["home_team"]).union(set(nfl["away_team"])))
@@ -34,7 +48,7 @@ stan_data = {
     "A": nfl["A"].tolist(),
 }
 
-with open("../starter-code/14_nfl-model.stan", "r") as f:
+with _codex_open_maybe_gzip("../starter-code/14_nfl-model.stan", "r") as f:
     stan_model_code = f.read()
 
 model = stan.build(stan_model_code, data=stan_data, random_seed=14)

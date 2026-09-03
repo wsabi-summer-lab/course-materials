@@ -18,7 +18,7 @@ np.random.seed(8)
 
 # load data
 nba_players = pd.read_csv(
-    "../data/08_nba-free-throws.csv",
+    "../data/08_nba-free-throws.csv.gz",
     delimiter=";",
     encoding="latin-1"
 )

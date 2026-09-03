@@ -62,7 +62,7 @@ mm_prop_quantiles_width = diff(mm_prop_quantiles)
 #######################
 
 # load data
-nba_players = read_delim("../data/09_nba-free-throws.csv", delim = ";")
+nba_players = read_delim("../data/09_nba-free-throws.csv.gz", delim = ";")
 #group players together
 nba_players = nba_players %>%
   mutate(

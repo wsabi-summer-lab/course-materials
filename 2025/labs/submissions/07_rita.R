@@ -17,7 +17,7 @@ library(tidyverse)
 
 #TASK 1
 
-diving_data = read_csv("../data/07_diving.csv")
+diving_data = read_csv("../data/07_diving.csv.gz")
 
 diving_disc = diving_data %>%
   group_by(Event, Diver, DiveNo, Round) %>%
@@ -135,7 +135,7 @@ data.frame(judge = judges_1, true_DOD = true_DODs, p_value = p_values)
 ############################
 
 # load data
-mlb_data = read_csv("../data/07_tto.csv")
+mlb_data = read_csv("../data/07_tto.csv.gz")
 
 mlb_data = mlb_data %>% 
   mutate(tto2 = ifelse(BATTER_SEQ_NUM >= 9, 1, 0),

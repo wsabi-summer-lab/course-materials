@@ -70,7 +70,7 @@ cat("Bootstrap Interval Length:", bootstrap_length, "\n")
 # load data
 
 ## code from yesterday
-nba_players = read_delim("../data/09_nba-free-throws.csv", delim = ";")
+nba_players = read_delim("../data/09_nba-free-throws.csv.gz", delim = ";")
 names(nba_players)
 
 nba_players_subset <- nba_players %>%

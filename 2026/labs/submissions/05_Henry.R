@@ -19,7 +19,7 @@ if (!dir.exists("plots")) dir.create("plots")
 #######################
 
 # load data
-nfl_data = read_csv("05_expected-points.csv")
+nfl_data = read_csv("05_expected-points.csv.gz")
 
 # Set up the response. y = net points of the next score in the half, restricted
 # to {-7,-3,-2,0,2,3,7}. We model it as an unordered categorical outcome with

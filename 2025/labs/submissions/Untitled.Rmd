@@ -9,7 +9,7 @@ output: html_notebook
 library(ggplot2)
 library(tidyverse)
 library(xgboost)
-nfl_wp = read.csv('../data/18_nfl-wp.csv')
+nfl_wp = read.csv('../data/18_nfl-wp.csv.gz')
 head(nfl_wp)
 ```
 

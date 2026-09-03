@@ -22,8 +22,8 @@ def mse(truth, prediction):
 ### GOLF PUTTING ###
 ####################
 
-putts_train = pd.read_csv("../data/13_putts-train.csv")
-putts_test = pd.read_csv("../data/13_putts-test.csv")
+putts_train = pd.read_csv("../data/13_putts-train.csv.gz")
+putts_test = pd.read_csv("../data/13_putts-test.csv.gz")
 
 mu_hat = np.average(putts_train["X"], weights=putts_train["N"])
 C_hat = mu_hat * (1 - mu_hat)

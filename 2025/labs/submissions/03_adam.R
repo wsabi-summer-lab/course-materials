@@ -17,14 +17,14 @@ setwd("filepath")
 ##############
 
 # load data
-nba_4 = read_csv("2025/labs/data/03_nba-four-factors.csv")
+nba_4 = read_csv("2025/labs/data/03_nba-four-factors.csv.gz")
 
 ##############
 ### PART 2 ###
 ##############
 
 # load data
-punts = read_csv("2025/labs/data/03_punts.csv")
+punts = read_csv("2025/labs/data/03_punts.csv.gz")
 
 #start
 

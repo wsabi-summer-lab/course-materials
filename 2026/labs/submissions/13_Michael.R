@@ -34,8 +34,8 @@ mse = function(truth, prediction) {
 ### GOLF PUTTING ###
 ####################
 
-putts_train = read_csv("../data/13_putts-train.csv")
-putts_test = read_csv("../data/13_putts-test.csv")
+putts_train = read_csv("../data/13_putts-train.csv.gz")
+putts_test = read_csv("../data/13_putts-test.csv.gz")
 
 mu_hat = with(putts_train, weighted.mean(X, N))
 C_hat = mu_hat * (1 - mu_hat)

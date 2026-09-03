@@ -14,7 +14,7 @@ set.seed(3)
 ##############
 
 # load data
-nba_four_factors = read_csv("../data/02_nba-four-factors.csv")
+nba_four_factors = read_csv("../data/02_nba-four-factors.csv.gz")
 
 # Task 1:
 # - Compute each variable's mean, standard deviation, minimum, and maximum
@@ -55,7 +55,7 @@ nba_four_factors = read_csv("../data/02_nba-four-factors.csv")
 ##############
 
 # load data
-punts = read_csv("../data/02_punts.csv")
+punts = read_csv("../data/02_punts.csv.gz")
 
 # Task 1:
 # - Plot post-punt yard line against starting yard line

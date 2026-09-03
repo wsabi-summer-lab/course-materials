@@ -8,7 +8,7 @@ set.seed(123)
 
 setwd("/Users/kennywatts/Documents/GitHub/summer-lab/2025/labs/data")
 
-mlb_team_seasons = read_csv("03_nba-four-factors.csv")
+mlb_team_seasons = read_csv("03_nba-four-factors.csv.gz")
 
 head(mlb_team_seasons)
 
@@ -122,7 +122,7 @@ rmse_stand
 
 # Task 1
 
-mlb_punts <- read_csv("03_punts.csv")
+mlb_punts <- read_csv("03_punts.csv.gz")
 
 train_index <- createDataPartition(mlb_punts$ydl, p = 0.8, list = FALSE)
 train_data <- mlb_punts[train_index, ]

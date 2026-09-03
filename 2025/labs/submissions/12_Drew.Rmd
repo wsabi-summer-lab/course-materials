@@ -16,7 +16,7 @@ set.seed(12)
 ##########################
 
 # load data
-nba_data = read_csv("../data/12_nba-box-scores.csv")
+nba_data = read_csv("../data/12_nba-box-scores.csv.gz")
 
 nba_data <- nba_data %>%
   filter(possessions != 0)
@@ -177,7 +177,7 @@ set.seed(12)
 ##########################
 
 # load data
-fg_data = read_csv("../data/12_field-goals.csv")
+fg_data = read_csv("../data/12_field-goals.csv.gz")
 
 ############################################
 ### TASK 1: Fit logistic model for P(FG) ###

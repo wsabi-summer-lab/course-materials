@@ -8,7 +8,7 @@ setwd("/Users/kennywatts/Documents/GitHub/summer-lab/2025/labs/data")
 
 # 8.1 NBA Free Throws
 
-nba_players = read.csv2("08_nba-free-throws.csv")
+nba_players = read.csv.gz2("08_nba-free-throws.csv.gz")
 
 head(nba_players)
 

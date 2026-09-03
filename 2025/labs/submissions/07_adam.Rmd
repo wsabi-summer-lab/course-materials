@@ -19,7 +19,7 @@ library(tidyverse)
 library(readr)
 library(purrr)
 library(broom)
-diving_data = read_csv("../data/07_diving.csv")
+diving_data = read_csv("../data/07_diving.csv.gz")
 
 data = diving_data %>%
   group_by(Diver, DiveNo, Round, Event) %>%
@@ -84,7 +84,7 @@ Alt, Mena , Zaitsev, and Barnett all have a pvalue of 0.000, suggesting strong b
 Beisbol
 
 ```{r pressure, echo=FALSE}
-mlb_data = read.csv("../data/07_tto.csv")
+mlb_data = read.csv("../data/07_tto.csv.gz")
 model1 = lm(EVENT_WOBA_19 ~ factor(ORDER_CT) + WOBA_FINAL_BAT_19 + WOBA_FINAL_PIT_19 + factor(HAND_MATCH) + factor(BAT_HOME_IND), data = mlb_data)
 
 model2 = lm(EVENT_WOBA_19 ~ factor(ORDER_CT) + WOBA_FINAL_BAT_19 + WOBA_FINAL_PIT_19 + factor(HAND_MATCH) + factor(BAT_HOME_IND) + BATTER_SEQ_NUM, data = mlb_data)

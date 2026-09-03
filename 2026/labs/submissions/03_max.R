@@ -14,7 +14,7 @@ set.seed(4)
 ##############
 
 # load data
-field_goals = read_csv("../data/03_field-goals.csv")
+field_goals = read_csv("../data/03_field-goals.csv.gz")
 fg_summary <- field_goals %>%
   group_by(ydl) %>%
   summarize(
@@ -90,8 +90,8 @@ results
 ##############
 
 # load data
-ncaab_results = read_csv("../data/03_ncaab-results.csv")
-ncaab_team_info = read_csv("../data/03_ncaab-teams.csv")
+ncaab_results = read_csv("../data/03_ncaab-results.csv.gz")
+ncaab_team_info = read_csv("../data/03_ncaab-teams.csv.gz")
 
 games <- ncaab_results %>%
   filter(Season == 2024) %>%

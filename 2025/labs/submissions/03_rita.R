@@ -11,14 +11,14 @@ library(tidyverse)
 ##############
 
 # load data
-nba = read_csv("../data/03_nba-four-factors.csv")
+nba = read_csv("../data/03_nba-four-factors.csv.gz")
 
 ##############
 ### PART 2 ###
 ##############
 
 # load data
-punts = read_csv("../data/03_punts.csv")
+punts = read_csv("../data/03_punts.csv.gz")
 
 
 #task 1.1 

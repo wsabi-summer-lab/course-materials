@@ -16,7 +16,7 @@ set.seed(8)
 #######################
 
 # load data
-nba_players = read.csv("../data/08_nba-free-throws.csv", sep=";")
+nba_players = read.csv("../data/08_nba-free-throws.csv.gz", sep=";")
 glimpse(nba_players)
 nba_players = nba_players %>%
   mutate(FTA=round(FTA*G,0), 

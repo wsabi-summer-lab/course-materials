@@ -22,7 +22,7 @@ set.seed(14)
 #################
 
 # load NFL games data from 2018-2023
-nfl_data = read_csv("../data/14_nfl-games.csv")
+nfl_data = read_csv("../data/14_nfl-games.csv.gz")
 # Create team indices
 teams <- sort(unique(c(nfl_data$home_team, nfl_data$away_team)))
 team_indices <- setNames(seq_along(teams), teams)

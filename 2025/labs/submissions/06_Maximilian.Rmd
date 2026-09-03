@@ -20,7 +20,7 @@ pacman::p_load(tidyverse, dplyr, ggthemes, data.table, lubridate, glmnet,
 ```
 
 ```{r}
-nfl_data <- read_csv("../data/06_expected-points.csv")
+nfl_data <- read_csv("../data/06_expected-points.csv.gz")
 nfl_data$pts_next_score <- as.factor(nfl_data$pts_next_score)
 ```
 

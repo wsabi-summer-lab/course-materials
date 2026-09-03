@@ -15,7 +15,7 @@ set.seed(7)
 ##############
 
 # load data
-diving_data = read_csv("../data/06_diving.csv", show_col_types = FALSE)
+diving_data = read_csv("../data/06_diving.csv.gz", show_col_types = FALSE)
 
 diving_data <- diving_data %>%
   group_by(Event, Round, Diver, Country, Rank, DiveNo, Difficulty) |> 
@@ -84,7 +84,7 @@ results |> filter(p_bh   < 0.05) |> arrange(p_bh)
 ##############
 
 # load data
-tto_data = read_csv("../data/06_tto.csv", show_col_types = FALSE)
+tto_data = read_csv("../data/06_tto.csv.gz", show_col_types = FALSE)
 
 m1 <- lm(EVENT_WOBA_19 ~ I(ORDER_CT >= 2) + I(ORDER_CT >= 3) +
            WOBA_FINAL_BAT_19 + WOBA_FINAL_PIT_19 + HAND_MATCH + BAT_HOME_IND,

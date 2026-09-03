@@ -13,7 +13,7 @@ library(readr)
 #################
 
 # run from the repository root
-putt_data = read_csv("2026/lectures/data/03_first-putts.csv", show_col_types = FALSE) |>
+putt_data = read_csv("2026/lectures/data/03_first-putts.csv.gz", show_col_types = FALSE) |>
     transmute(
         player_first_name = `Player First Name`,
         player_last_name = `Player Last Name`,

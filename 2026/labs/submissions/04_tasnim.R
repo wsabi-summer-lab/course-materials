@@ -14,7 +14,7 @@ library(readr)
 ###############################
 
 # run from 2026/labs/submissions/ or 2026/labs/starter-code/
-ba_data <- read_csv("~/Desktop/04_ba-2020-2021.csv", show_col_types = FALSE)
+ba_data <- read_csv("~/Desktop/04_ba-2020-2021.csv.gz", show_col_types = FALSE)
 
 # Task 1:
 # - Fit the day-1 style linear regression model BA_2021 ~ BA_2020
@@ -107,7 +107,7 @@ print(ba_workloads)
 ### PART 2: FIELD-GOAL SUCCESS GAM ###
 #######################################
 
-fg_data <- read_csv("~/Desktop/04_field-goals.csv") 
+fg_data <- read_csv("~/Desktop/04_field-goals.csv.gz") 
 
 set.seed(4)
 train_index = sample(1:nrow(fg_data), size = round(0.7 * nrow(fg_data)))

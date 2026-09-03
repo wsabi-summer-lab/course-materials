@@ -15,7 +15,7 @@ set.seed(14)
 ##############################
 
 # Read NFL game data
-nfl_data <- read_csv("../data/14_nfl-games.csv")
+nfl_data <- read_csv("../data/14_nfl-games.csv.gz")
 
 # Create a unique sorted list of teams
 teams <- sort(unique(c(nfl_data$home_team, nfl_data$away_team)))

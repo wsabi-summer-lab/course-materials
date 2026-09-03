@@ -17,7 +17,7 @@ np.random.seed(RANDOM_STATE)
 ##############
 
 # load data
-diving = pd.read_csv("../data/06_diving.csv")
+diving = pd.read_csv("../data/06_diving.csv.gz")
 
 # Task 1:
 # - Recreate the permutation-test setup from Lecture 6 for each judge
@@ -143,7 +143,7 @@ for _, row in results_df[results_df["Sig_Bonf"]].iterrows():
 ##############
 
 # load data
-tto = pd.read_csv("../data/06_tto.csv")
+tto = pd.read_csv("../data/06_tto.csv.gz")
 
 # Variable map for the lecture notation:
 # - y_i      = EVENT_WOBA_19

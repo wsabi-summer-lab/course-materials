@@ -15,7 +15,7 @@ set.seed(3)
 ##############
 
 # load data
-nba_four_factors = read_csv("../data/02_nba-four-factors.csv")
+nba_four_factors = read_csv("../data/02_nba-four-factors.csv.gz")
 
 #Task 1
 nba_four_factors$`Protecting Factor` <- nba_four_factors$`Protecting Factor` * -1
@@ -133,7 +133,7 @@ rmse2
 ##############
 
 # load data
-punts = read_csv("../data/02_punts.csv")
+punts = read_csv("../data/02_punts.csv.gz")
 
 #Task 1
 # Plot yi against ydli

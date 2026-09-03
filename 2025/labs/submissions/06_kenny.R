@@ -5,7 +5,7 @@ library(tidyverse)
 
 setwd("/Users/kennywatts/Documents/GitHub/summer-lab/2025/labs/data")
 
-nfl_data = read_csv("06_expected-points.csv")
+nfl_data = read_csv("06_expected-points.csv.gz")
 
 # Model 1: Just Yard Line
 

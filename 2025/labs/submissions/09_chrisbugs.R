@@ -123,7 +123,7 @@ ggplot() +
 #######################
 
 # load data
-nba_players = read_delim("../data/09_nba-free-throws.csv", delim = ";")
+nba_players = read_delim("../data/09_nba-free-throws.csv.gz", delim = ";")
 nba_players
 
 # Get FT_total, FTA_total, FT_percent 

@@ -74,7 +74,7 @@ quantile(p_hats, c(0.025, 0.975))
 
 # 9.2 NBA Free Throws
 
-nba_players = read_delim("09_nba-free-throws.csv", delim = ";")
+nba_players = read_delim("09_nba-free-throws.csv.gz", delim = ";")
 
 nba_players <- nba_players %>%
   mutate(

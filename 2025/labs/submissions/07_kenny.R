@@ -4,7 +4,7 @@ library(tidyverse)
 
 setwd("/Users/kennywatts/Documents/GitHub/summer-lab/2025/labs/data")
 
-diving_data = read_csv("07_diving.csv")
+diving_data = read_csv("07_diving.csv.gz")
 
 # Replicating Permutation test to detect judge nationality
 
@@ -83,7 +83,7 @@ result_df
 
 # Parametric Inference
 
-mlb_data = read_csv("07_tto.csv")
+mlb_data = read_csv("07_tto.csv.gz")
 
 head(mlb_data)
 

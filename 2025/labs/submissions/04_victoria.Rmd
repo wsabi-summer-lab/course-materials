@@ -5,7 +5,7 @@
 library(ggplot2)
 library(tidyverse)
 
-fg = read_csv('../data/04_field-goals.csv')
+fg = read_csv('../data/04_field-goals.csv.gz')
 head(fg)
 
 plotting <- function(x_data, y_data, color, x_title, y_title) {
@@ -115,8 +115,8 @@ ggplot(grouped_ydl, aes(x = ydl, y = avg_fg_made)) +
 ```{r}
 #1 - filter data 
 
-ncaab_results = read_csv("../data/04_ncaab-results.csv")
-ncaab_team_info = read_csv("../data/04_ncaab-teams.csv")
+ncaab_results = read_csv("../data/04_ncaab-results.csv.gz")
+ncaab_team_info = read_csv("../data/04_ncaab-teams.csv.gz")
 
 head(ncaab_results)
 head(ncaab_team_info)

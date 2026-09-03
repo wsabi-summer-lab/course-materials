@@ -11,7 +11,7 @@ library(tidyverse)
 ##############
 
 # load data
-field_goals = read_csv("../data/04_field-goals.csv")
+field_goals = read_csv("../data/04_field-goals.csv.gz")
 
 set.seed(42)
 n <- nrow(nba_factors)
@@ -57,8 +57,8 @@ field_goals_test %>%
 ##############
 
 # load data
-ncaab_results = read_csv("../data/04_ncaab-results.csv")
-ncaab_team_info = read_csv("../data/04_ncaab-teams.csv") %>% 
+ncaab_results = read_csv("../data/04_ncaab-results.csv.gz")
+ncaab_team_info = read_csv("../data/04_ncaab-teams.csv.gz") %>% 
   filter(LastD1Season >= 2023 & FirstD1Season <= 2023)
 
 ncaab_results = ncaab_results %>% filter(Season == 2023)

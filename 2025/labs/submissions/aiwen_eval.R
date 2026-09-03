@@ -1,5 +1,5 @@
 # Aiwen's Spotify Prediction Model Evaluation
-# Trains on 19_spotify-train.csv and evaluates on 19_spotify-test.csv
+# Trains on 19_spotify-train.csv.gz and evaluates on 19_spotify-test.csv.gz
 
 library(tidyverse)
 library(glmnet)
@@ -14,7 +14,7 @@ library(tidymodels)
 set.seed(03201)
 
 # Load training data
-spotify_train = read_csv("../data/19_spotify-train.csv")
+spotify_train = read_csv("../data/19_spotify-train.csv.gz")
 
 # Keep only people with >= 10 songs
 spotify_train <- spotify_train %>%
@@ -72,7 +72,7 @@ rf_spec <-
 rf_fit <- fit(rf_spec, Added_by ~ ., data = train_df)
 
 # Load test data
-spotify_test = read_csv("../data/19_spotify-test.csv")
+spotify_test = read_csv("../data/19_spotify-test.csv.gz")
 
 # Process test data the same way
 spotify_test_long <- spotify_test %>%

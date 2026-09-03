@@ -16,4 +16,4 @@ set.seed(6)
 #######################
 
 # load data
-nfl_data = read_csv("../data/06_expected-points.csv")
+nfl_data = read_csv("../data/06_expected-points.csv.gz")

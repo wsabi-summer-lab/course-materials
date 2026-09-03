@@ -23,7 +23,7 @@ np.random.seed(RANDOM_STATE)
 #######################
 
 # load data
-nfl_data = pd.read_csv("../data/05_expected-points.csv")
+nfl_data = pd.read_csv("../data/05_expected-points.csv.gz")
 
 #Task 1
 

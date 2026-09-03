@@ -15,7 +15,7 @@ set.seed(7)
 ##############
 
 # load data
-diving_data = read_csv("../data/06_diving.csv", show_col_types = FALSE)
+diving_data = read_csv("../data/06_diving.csv.gz", show_col_types = FALSE)
 
 # Task 1:
 # - Recreate the permutation-test setup from Lecture 6 for each judge
@@ -47,7 +47,7 @@ diving_data = read_csv("../data/06_diving.csv", show_col_types = FALSE)
 ##############
 
 # load data
-tto_data = read_csv("../data/06_tto.csv", show_col_types = FALSE)
+tto_data = read_csv("../data/06_tto.csv.gz", show_col_types = FALSE)
 
 # Variable map for the lecture notation:
 # - y_i      = EVENT_WOBA_19

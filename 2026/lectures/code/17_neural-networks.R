@@ -23,8 +23,8 @@ library(xgboost)
 
 set.seed(17)
 
-feature_path = "2026/lectures/data/17_bdb-static-features.csv"
-snap_path = "2026/lectures/data/17_bdb-static-snap.csv"
+feature_path = "2026/lectures/data/17_bdb-static-features.csv.gz"
+snap_path = "2026/lectures/data/17_bdb-static-snap.csv.gz"
 figure_dir = "2026/lectures/figures"
 dir.create(figure_dir, recursive = TRUE, showWarnings = FALSE)
 

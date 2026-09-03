@@ -20,7 +20,7 @@ pacman::p_load(tidyverse, dplyr, ggthemes, data.table, lubridate, glmnet,
 ```
 
 ```{r}
-mlb_team_seasons <- read_csv("../data/03_nba-four-factors.csv")
+mlb_team_seasons <- read_csv("../data/03_nba-four-factors.csv.gz")
 ```
 
 ```{r}
@@ -178,7 +178,7 @@ As seen below, the rmse are equivalent for the two models. This is expected give
 
 
 ```{r}
-punts <- read_csv("../data/03_punts.csv")
+punts <- read_csv("../data/03_punts.csv.gz")
 punts$punter <- as.factor(punts$punter)
 ```
 

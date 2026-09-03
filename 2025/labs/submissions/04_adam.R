@@ -14,15 +14,15 @@ library(dplyr)
 ##############
 
 # load data
-field_goals = read_csv("2025/labs/data/04_field-goals.csv")
+field_goals = read_csv("2025/labs/data/04_field-goals.csv.gz")
 
 ##############
 ### PART 2 ###
 ##############
 
 # load data
-ncaab_results = read_csv("2025/labs/data/04_ncaab-results.csv")
-ncaab_team_info = read_csv("2025/labs/data/04_ncaab-teams.csv")
+ncaab_results = read_csv("2025/labs/data/04_ncaab-results.csv.gz")
+ncaab_team_info = read_csv("2025/labs/data/04_ncaab-teams.csv.gz")
 
 n = nrow(field_goals)
 set.seed(3)
@@ -120,8 +120,8 @@ ggplot() +
   theme_minimal()
 
 ########
-ncaab_results = read_csv("2025/labs/data/04_ncaab-results.csv")
-ncaab_team_info = read_csv("2025/labs/data/04_ncaab-teams.csv")
+ncaab_results = read_csv("2025/labs/data/04_ncaab-results.csv.gz")
+ncaab_team_info = read_csv("2025/labs/data/04_ncaab-teams.csv.gz")
 #ncaab_results only from season 2024-2025
 ncaab_results = ncaab_results %>% 
   filter(Season == 2023)

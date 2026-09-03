@@ -9,7 +9,7 @@ library(dplyr)
 
 setwd("/Users/kennywatts/Documents/GitHub/summer-lab/2025/labs/data")
 
-field_goals = read_csv("04_field-goals.csv")
+field_goals = read_csv("04_field-goals.csv.gz")
 
 head(field_goals)
 
@@ -69,7 +69,7 @@ ggplot(test_data, aes(x = pred_multi, y = fg_made)) +
 
 # 4.2 NCAA Basketball Power Scores
 
-ncaab_results = read_csv("04_ncaab-results.csv")
+ncaab_results = read_csv("04_ncaab-results.csv.gz")
 
 head(ncaab_results)
 
@@ -136,7 +136,7 @@ ggplot(team_strengths_df, aes(x = reorder(TeamID, Strength), y = Strength)) +
 ncaab_2023_24 <- ncaab_results %>%
   filter(Season == 2023)
 
-ncaab_team_info = read_csv("04_ncaab-teams.csv")
+ncaab_team_info = read_csv("04_ncaab-teams.csv.gz")
 
 ncaab_team_info <- ncaab_team_info %>%
   filter(TeamName %in% c("Purdue", "Connecticut"))

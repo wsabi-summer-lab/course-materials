@@ -29,7 +29,7 @@ batting
 #### 2.1.3
 ### Task 1
 
-data = read.csv('02_mlb-team-seasons.csv')
+data = read.csv('02_mlb-team-seasons.csv.gz')
 
 
 data = data |>
@@ -88,7 +88,7 @@ q1_graph = ggplot(pred_df, aes(x = WP_pred, y = WP, color = model)) +
 
 #### 2.2.2
 ### Task 1
-data = read.csv('02_mlb-payrolls.csv')
+data = read.csv('02_mlb-payrolls.csv.gz')
 
 data = data |>
   filter(yearID != 2020)

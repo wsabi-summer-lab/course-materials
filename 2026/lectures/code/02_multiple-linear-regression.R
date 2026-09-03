@@ -13,9 +13,9 @@ library(splines)
 #################
 
 # run from the repository root
-ncaa_data = read_csv("2026/lectures/data/02_ncaa-games.csv", show_col_types = FALSE)
-punts = read_csv("2026/lectures/data/02_punts.csv", show_col_types = FALSE)
-draft_data = read_csv("2026/lectures/data/02_nfl-draft-second-contracts.csv", show_col_types = FALSE)
+ncaa_data = read_csv("2026/lectures/data/02_ncaa-games.csv.gz", show_col_types = FALSE)
+punts = read_csv("2026/lectures/data/02_punts.csv.gz", show_col_types = FALSE)
+draft_data = read_csv("2026/lectures/data/02_nfl-draft-second-contracts.csv.gz", show_col_types = FALSE)
 
 ################################
 ### NCAA POWER RATINGS MODEL ###

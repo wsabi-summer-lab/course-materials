@@ -14,7 +14,7 @@ set.seed(13)
 ####################
 
 # load training data (first half of season)
-putts_train = read_csv("../data/13_putts-train.csv")
+putts_train = read_csv("../data/13_putts-train.csv.gz")
 # preview data
 head(putts_train)
 
@@ -82,6 +82,6 @@ ggplot(putts_long, aes(x = X2, y = Estimated, color = Estimator)) +
   theme_minimal()
 
 # load test data (second half of season)
-putts_test = read_csv("../data/13_putts-test.csv")
+putts_test = read_csv("../data/13_putts-test.csv.gz")
 # preview data
 head(putts_test)

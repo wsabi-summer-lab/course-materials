@@ -18,7 +18,7 @@ if (!dir.exists("plots")) dir.create("plots")
 ##############
 
 # load data
-nba_four_factors = read_csv("02_nba-four-factors.csv")
+nba_four_factors = read_csv("02_nba-four-factors.csv.gz")
 
 # Build the four factors so that larger values are always better for the team.
 # x1 = eFG% - opp eFG%            (shooting advantage)
@@ -242,7 +242,7 @@ cat("Test-set RMSE (standardized model):", round(rmse_std, 4), "\n")
 ##############
 
 # load data
-punts = read_csv("02_punts.csv")
+punts = read_csv("02_punts.csv.gz")
 # columns: ydl (starting yard line from opponent goal line), next_ydl (outcome y),
 # season, punter (name), pq (punter quality).
 

@@ -14,7 +14,7 @@ set.seed(4)
 ##############
 
 # load data
-field_goals = read_csv("../data/03_field-goals.csv")
+field_goals = read_csv("../data/03_field-goals.csv.gz")
 
 print(field_goals)
 
@@ -166,8 +166,8 @@ ggplot() +
 ##############
 
 # load data
-ncaab_results = read_csv("../data/03_ncaab-results.csv")
-ncaab_team_info = read_csv("../data/03_ncaab-teams.csv")
+ncaab_results = read_csv("../data/03_ncaab-results.csv.gz")
+ncaab_team_info = read_csv("../data/03_ncaab-teams.csv.gz")
 
 print(ncaab_results)
 print(ncaab_team_info)

@@ -12,7 +12,7 @@ library(stringr)
 ####################
 
 # load data
-park_data = read_csv("data/05_park-effects.csv")
+park_data = read_csv("data/05_park-effects.csv.gz")
 glimpse(park_data)
 # find means of INN_RUNS grouping by PARK
 park_means = park_data %>%

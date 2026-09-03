@@ -20,7 +20,7 @@ from sklearn.model_selection import KFold
 ###############################
 
 # run from 2026/labs/submissions/ or 2026/labs/starter-code/
-ba_data = pd.read_csv("../data/04_ba-2020-2021.csv")
+ba_data = pd.read_csv("../data/04_ba-2020-2021.csv.gz")
 
 # Task 1:
 # - Fit the day-1 style linear regression model BA_2021 ~ BA_2020
@@ -129,7 +129,7 @@ print("The interval as seen in the prior equation is proportional to 1/sqrt(AB) 
 ### PART 2: FIELD-GOAL SUCCESS GAM ###
 #######################################
 
-fg_data = pd.read_csv("../data/04_field-goals.csv")
+fg_data = pd.read_csv("../data/04_field-goals.csv.gz")
 
 # Task 1:
 # - Fit at least 3 competing probability models for fg_made

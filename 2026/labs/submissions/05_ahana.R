@@ -6,7 +6,7 @@ library(tidyverse)
 # set seed
 set.seed(6)
 
-nfl_data <- read_csv("05_expected-points.csv") %>%
+nfl_data <- read_csv("05_expected-points.csv.gz") %>%
   mutate(
     pts_next_score = factor(pts_next_score, levels = c(0, -7, -3, -2, 2, 3, 7)),
     down = factor(down, levels = 1:4)

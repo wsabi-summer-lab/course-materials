@@ -23,7 +23,7 @@ library(xgboost)
 
 set.seed(16)
 
-data_path = "2026/lectures/data/16_expected-points.csv"
+data_path = "2026/lectures/data/16_expected-points.csv.gz"
 figure_dir = "2026/lectures/figures"
 dir.create(figure_dir, recursive = TRUE, showWarnings = FALSE)
 

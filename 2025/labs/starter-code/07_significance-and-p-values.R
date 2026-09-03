@@ -14,7 +14,7 @@ set.seed(7)
 #########################
 
 # load data
-diving_data = read_csv("../data/07_diving.csv")
+diving_data = read_csv("../data/07_diving.csv.gz")
 
 
 ############################
@@ -22,4 +22,4 @@ diving_data = read_csv("../data/07_diving.csv")
 ############################
 
 # load data
-mlb_data = read_csv("../data/07_tto.csv")
+mlb_data = read_csv("../data/07_tto.csv.gz")

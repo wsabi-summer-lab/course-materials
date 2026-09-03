@@ -17,7 +17,7 @@ set.seed(8)
 #######################
 
 # load data
-nba_players = read.csv("../data/08_nba-free-throws.csv", sep = ";")
+nba_players = read.csv("../data/08_nba-free-throws.csv.gz", sep = ";")
 names(nba_players)
 
 nba_players_subset <- nba_players %>%

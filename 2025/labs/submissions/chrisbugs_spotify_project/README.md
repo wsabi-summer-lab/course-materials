@@ -9,6 +9,6 @@ Instructions on how to run this project are inside load.py -> here they are agai
 6) python3 model/evaluate_final_model.py {your csv path here}
 
 #### Example call for step 6:
-python3 evaluate_final_model.py /Users/chrisbugs/summer-lab/2025/labs/data/19_spotify-train.csv
+python3 evaluate_final_model.py /Users/chrisbugs/summer-lab/2025/labs/data/19_spotify-train.csv.gz
 ### Why python3?
 I use python3 due to the interpreter I have set up, you can use python in place of python3 if you have that set up

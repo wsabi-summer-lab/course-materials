@@ -15,7 +15,7 @@ getwd()
 ##############
 
 # load data
-nba_four_factors = read_csv("../data/03_nba-four-factors.csv")
+nba_four_factors = read_csv("../data/03_nba-four-factors.csv.gz")
 
 head(nba_four_factors)
 
@@ -122,7 +122,7 @@ library(tidyverse)
 library(splines)
 
 # Load data
-punts <- read_csv("../data/03_punts.csv")
+punts <- read_csv("../data/03_punts.csv.gz")
 
 # Set seed for reproducibility
 set.seed(123)

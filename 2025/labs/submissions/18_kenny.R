@@ -9,7 +9,7 @@ setwd("/Users/kennywatts/Documents/GitHub/summer-lab/2025/labs/data")
 
 set.seed(18)
 
-nfl_data = read_csv("18_nfl-wp.csv")
+nfl_data = read_csv("18_nfl-wp.csv.gz")
 
 head(nfl_data)
 

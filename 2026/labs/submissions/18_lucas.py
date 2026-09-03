@@ -20,10 +20,10 @@ np.random.seed(18)
 ### NBA DATA ###
 ################
 
-data_path = "../data/18_nba-clusters.csv"
+data_path = "../data/18_nba-clusters.csv.gz"
 import os
 if not os.path.exists(data_path):
-    data_path = "2026/labs/data/18_nba-clusters.csv"
+    data_path = "2026/labs/data/18_nba-clusters.csv.gz"
 
 nba_data = pd.read_csv(data_path)
 

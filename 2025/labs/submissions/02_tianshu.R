@@ -2,7 +2,7 @@ library(tidyverse)
 setwd("/Users/tianshufeng/Desktop/UPenn/2025 Summer")
 
 # Part 1
-team = read.csv("02_mlb-team-seasons.csv")
+team = read.csv("02_mlb-team-seasons.csv.gz")
 
 model = lm(log(1 / WP - 1) ~ log(RA / RS) + 0, data = team)
 
@@ -42,7 +42,7 @@ team %>% ggplot(aes(x = WP)) +
   theme_minimal()
 
 # Part 2
-payroll = read.csv("02_mlb-payrolls.csv")
+payroll = read.csv("02_mlb-payrolls.csv.gz")
 payroll = payroll %>% filter(yearID != 2020)
 
 payroll %>%

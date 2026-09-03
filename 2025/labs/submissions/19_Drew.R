@@ -19,7 +19,7 @@ set.seed(19)
 ####################
 
 # read in data
-spotify_data <- read_csv("../data/19_spotify-train.csv")
+spotify_data <- read_csv("../data/19_spotify-train.csv.gz")
 
 # peek at structure
 glimpse(spotify_data)
@@ -82,7 +82,7 @@ ggplot(top30_dance, aes(x = Danceability, y = Popularity)) +
 
 Task 2: Filtering Dataset
 ```{r}
-filtered_data <- read_csv("../data/19_spotify-train.csv")
+filtered_data <- read_csv("../data/19_spotify-train.csv.gz")
 
 # 2. Keep only numeric columns
 spotify_num <- spotify_data %>%
